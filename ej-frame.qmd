@@ -66,7 +66,12 @@ As concepts of justice rooted in grass-roots advocacy and academia collide with 
 
 Issue definition matters because the mobilization or suppression of conflicts allocates power---"antagonists can rarely agree on what the issues are because power is involved in the definition" [@Schattschneider1975]. Changes in issue definition frequently precede major policy changes [@Baumgartner1993]. 
 
+
 While the adoption of environmental justice discourse is evidence of the movement's impact on policymaking discourse, the new and contested meanings of the phase make it difficult to assess the movement's impact on substantive policy outcomes because meaning may not be shared between policymakers and activists, or even among activists [@Lester2001]. 
+
+To systematically examine the impact of advocacy on policy, I focus on U.S. federal agency rulemaking. Environmental justice is relevant to agency rulemaking in particular due to President Clinton's Executive Order 12898---"Federal Actions to Address Environmental Justice in Minority Populations and Low-Income Populations"---directing all agencies to consider EJ implications of their actions and policies. Executive Orders or statements from agency heads in every administration have since interpreted and reinterpreted parts of E.O. 12898, all with direct implications for rulemaking.^[
+While E.O. 12898 does not itself create a right to sue agencies, courts may strike down rules for failing to comply with procedural requirements of the Administrative Procedure Act (APA) and National Environmental Policy Act (NEPA) if the agency fails to "examine the relevant data" or "consider an important aspect of the problem" (*Motor Vehicle Mfrs. Ass'n v. State Farm Mut. Auto. Ins. Co.*, 1983). This can include an agency's 12898 EJ analysis: "environmental justice analysis can be reviewed under NEPA and the APA" (*Communities Against Runway Expansion, Inc. v. FAA*, 2004).] 
+Despite this Executive Order, not all draft or final rules address EJ. Those that do, however, tend to cite E.O. 12898 and use the phrase "environmental justice." For the same reason, commenters who critique draft rules also cite E.O. 12898 and use this language. Again, this is true both for movement activists and reactionary efforts to redefine the term.
 
 In prior work, I show that environmental justice advocacy is associated with agencies adding EJ language and changing how they discuss it. However, these effects are driven by large national advocacy groups, not frontline EJ groups  [@ej]. These findings invite three further questions that I take up in this paper: (1) is adoption of EJ rhetoric related to substantive policy change?; (2) how should we interpret these changes?; and (3) why are some groups more successful than others? The first and third questions require hand-coding a large number of documents related to advocacy campaigns and their success or failure in achieving the substantive policy changes they sought. The second and third questions require a taxonomy of different kinds of environmental justice claims raised by advocates or adopted by agencies. This taxonomy allows us to better interpret the impact of advocacy and assess whether unequal levels of success are related to group characteristics or the kind of environmental justice they seek. 
   
@@ -84,7 +89,7 @@ In prior work, I show that environmental justice advocacy is associated with age
 
 # Data
 
-To systematically assess how often the enviornmental justice frame is used in federal rulemaking and what it means when it is, I first collect all a dataset of 14,938 draft and final rule pairs from January 2005 through August 2024 [Note:  @fig-ej-data totals for 2024 are partial year totals].
+To systematically assess how often the environmental justice frame is used in federal rulemaking and what it means when it is, I first collect all a dataset of all 14,938 draft and final rule pairs published from January 2005 through August 2024 [Note: @fig-ej-data totals for 2024 are partial year totals] by all 52 agencies that published at least one rule addressing environmental justice.^[Becauses I focus on whther rules address commenter demands, I exclude propesed rules that were not finalized and final rules that were published without first taking comments on a draft.] Of these, 3291 proposed rules and 4,738 final rules discuss environmental justice implications of the rule. I also collect all public commments on these rules. 24,362 unique comments (excluding mass comment and petitioning campaigns) mention "environmental justice." 
 
  @fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. 
 
@@ -196,7 +201,7 @@ In contrast local groups tended to focus on more targeted policies (e.g., state 
 
 ## Emerging Dimensions of Environmental Justice Frame {#sec-dim}
 
-In this section, I inductively identify salient dimensions of environmental justice raised in public comments. Inequalies are correlated.
+In this section, I inductively identify salient dimensions of environmental justice raised in public comments. <!--Inequalities are correlated.--> 
 
 ### Spatial 
 
