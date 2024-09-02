@@ -1,0 +1,599 @@
+---
+journal:
+  blinded: false
+#wordcount: 9965
+title: "Adoption and Cooption of the Environmental Justice Issue Frame"
+format:
+  #docx
+  cmc-article-pdf:
+    fig-pos: 'hb'
+    fig-env: "figure"
+    keep-tex: false
+    filters: [citeproc.lua, wordcount.lua]
+linestretch: 1.5
+indent: true
+number-sections: true
+cap-location: top
+runningtitle: The Environmental Justice Issue Frame
+runningauthor: Judge-Lord
+author:
+  - name: Devin Judge-Lord
+    affiliations:  
+     - name: University of Michigan
+       #department: Ford School of Public Policy
+    email: "judgelor@umich.edu"
+thanks: |
+    "I will be grateful for any feedback on this draft: judgelor@umich.edu. The most recent draft is here: [judgelord.github.io/ej/ej-frame.pdf](https://judgelord.github.io/ej/ej-frame.pdf). [DevinJudgeLord@fas.harvard.edu](mailto:DevinJudgeLord@fas.harvard.edu), research assistance from Hope Karnopp and Sophia Gustafson, and funding from the National Science Foundation and American Political Science Association."
+bibliography: "assets/dissertation.bib"
+execute:
+  echo: false
+  cache: false
+  message: false
+  warning: false
+abstract: |
+  The concept of environmental justice has become a dominant frame for environmental policy agenda in the US federal goverment. Administrations from both parties have shifted attention from society-wide benefits and costs of environmental policy to the distribution of benefits and costs, both for regulation and industrial policy. However, as concepts of justice rooted in grass-roots advocacy and academia collide with the opportunity structure of federal policymaking and implementation, the term "environmental justice" has gained new meanings, including definitions rejected by most activists and absent from academic writing. While the adoption of environmental justice discourse is evidence of the movement's impact on policymaking, the new meanings of the phase make it difficult to assess the movement's impact on substantive policy outcomes. 
+  
+  Dissaggregating the meanings of environmental justice can help us understand puzzeling consistency with which the term is used across presidential administrations and large differences in the sucess of campaings organized by different groups under the banner of  environmental justice. Specifcally, I take up three querstions: (1) is adoption of EJ rhetoric related to substantive policy change?; (2) how should we interpret these changes?; and (3) why are some groups more successful than others? 
+  
+  Analyzing the text of over 10,000 draft and final rules from 52 agencies and millions of public comments on these rules from 1993 to 2024, I build an empirically-rooted taxonomy of environmental justice claims made in the policy process, track changes in usage by advocates and policymakers over time, and assess the relationship between different types of claims and policy change. Leveraging within-organization variation in efficacy across multiple lobbying attempts, I find that when organizations successfully mobilize environmental justice issue frames (i.e., policymakers adopt environmental justice language after an organization pressures them to), these organizations are more likely to achieve their substantive policy aims. However, this effect is mostly driven by large national advocacy organizations adopting environmental justice rhetoric to advance more traditional environmental policy agendas, not by the kind of environmental justice activists that social movement scholars write about. Moreover, the environmental justice frame is being used by advocates and policymakers to justify deregulatory policies as advancing economic development, including promoting timber harvesting and fossil fuel sector employment. This "coption" partially explains consistancy in the term's use across admintraions. These findings highlight the importance of tracking changes in meanings and measuring substantive policy outcomes for assessing the impact of social movements on policy and policy implementation.
+keywords: "Inequality, Bureaucratic Policymaking, Issue Framing, Environmental Justice"
+date: today
+---
+
+```{r}
+source(here::here("code/setup.R"))
+
+# overide defaults 
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE) 
+
+
+``` 
+
+\clearpage 
+
+# Introduction {#sec-intro}
+
+
+Long marginalized in the U.S. environmental movement, the concept of environmental justice has become a near-dominant frame for environmental policy agenda in the US federal government [@EO14096]. Environmental justice was the dominant frame for environmental policy advance both by President Biden ("Joe's Plan for a Clean Energy Revolution and Environmental Justice") and now Vice President Harris ("A Climate Plan For the People") as they sought the Democratic Party's nomination.  Even strong critics of government regulation presume that environmental justice analysis will continue to shape policy in future Republican administations [@2025, p. 441].
+  
+This frame---historically uniting various critics of mainstream utilitarian environmentalism around unequal distributions of environmental harms and amenities---has found a fit with policy agendas as both parties have shifted from basing policy proposals on society-wide benefits and costs toward a greater focus on the distribution of benefits and costs, both for regulation and, increasingly. industrial policy.  @Taylor2002 describes a fusion of the American Indian Movement, Chicano movement, farmworker movement, civil rights movement, and union organizing: 
+
+> People of color [raised] social justice concerns such as self-determination, sovereignty, human rights, social inequality, loss of land base, limited access to natural resources, and disproportionate impacts of environmental hazards and linked them with traditional working-class environmental concerns such as worker rights and worker health and safety to develop an environmental justice agenda. (p. 1)
+
+Like other movements, the EJ movement illustrates how groups attempt to use a particular way of framing policy issues (in this case, a particular phrase) as a vehicle to build coalitions and advance policy agendas. The original members of this coalition---activists fighting racialized geographies of environmental harms, settler colonialism, and hazards working conditions---continue to organize under the environmental justice banner. But as it has gained political legitimacy, other groups increasingly frame their struggles as matters of environmental justice. 
+
+As concepts of justice rooted in grass-roots advocacy and academia collide with the opportunity structure of federal policymaking and implementation, environmental justice has gained new meanings. These changes include academics and activists linking issues such as GMO labeling [@Gonzalez2011], police violence [@Pellow2016], cosmetics [@DiCosmo2024], the location of parks [@Boone2009], the location of dollar stores [@Kavi2019], homelessness [@Gamble2023], COVID-19 [@Dean2022], science policy [@Desikan2023], light pollution [@Xiao2023] garbage collection [@Bell2013], plastic pollution [@Kefela2024], knowledge of earthquake risk [@Reddy2023], and anything related to climate change [@Resnik2022], including renewable energy development [Whyte2023] <!--Green House Gasses [CITE]--> to the environmental justice movement. These changes also includes opponents of environmental regulation adopting definitions rejected by most activists and absent from academic writing. Both efforts to expand and coop the environmental issue frame are evidence of the power and legitimacy it holds in environmental policymaking.
+
+Issue definition matters because the mobilization or suppression of conflicts allocates power---"antagonists can rarely agree on what the issues are because power is involved in the definition" [@Schattschneider1975]. Changes in issue definition frequently precede major policy changes [@Baumgartner1993]. 
+
+While the adoption of environmental justice discourse is evidence of the movement's impact on policymaking discourse, the new and contested meanings of the phase make it difficult to assess the movement's impact on substantive policy outcomes because meaning may not be shared between policymakers and activists, or even among activists [@Lester2001]. 
+
+In prior work, I show that environmental justice advocacy is associated with agencies adding EJ language and changing how they discuss it. However, these effects are driven by large national advocacy groups, not frontline EJ groups  [@ej]. These findings invite three further questions that I take up in this paper: (1) is adoption of EJ rhetoric related to substantive policy change?; (2) how should we interpret these changes?; and (3) why are some groups more successful than others? The first and third questions require hand-coding a large number of documents related to advocacy campaigns and their success or failure in achieving the substantive policy changes they sought. The second and third questions require a taxonomy of different kinds of environmental justice claims raised by advocates or adopted by agencies. This taxonomy allows us to better interpret the impact of advocacy and assess whether unequal levels of success are related to group characteristics or the kind of environmental justice they seek. 
+  
+  Analyzing the text of over 10,000 draft and final rules from 52 agencies and 50 million public comments on these rules from 1993 to 2024, I build an empirically-rooted taxonomy of environmental justice claims made in the policy process, track changes in usage by advocates and policymakers over time, and assess the relationship between different types of claims and policy change.
+  
+  
+  Leveraging within-organization variation in efficacy across multiple lobbying attempts, I find that when organizations successfully mobilize environmental justice issue frames (i.e., policymakers adopt environmental justice language after an organization pressures them to), these organizations are more likely to achieve their substantive policy aims.
+  
+  However, this effect is mostly driven by large national advocacy organizations adopting environmental justice rhetoric to advance more traditional environmental policy agendas, not by the kind of environmental justice activists that social movement scholars write about. <!-- Ironically, definitions of environmental justice that align least with those traditionally used by activists and discussed in academic literature are most associated with policy change. --> 
+  
+  The meanings of environmental justice raised by policy advocates vary widely. Beyond the original focus on environmental racism, advocates raising percieved environmental injustices now include almost any inequality across space (including differences across jurisdictions, urban and rural communities, and proximity to various kinds of infrastructure and (dis)amenities) or demographic identity group (including race, gender, age, income, sector of employment, native language, culture, and disability status). 
+  
+  These findings highlight the importance of tracking changes in meanings and measuring substantive policy outcomes for assessing the impact of social movements on policy and policy implementation.
+
+
+# Data
+
+To systematically assess how often the enviornmental justice frame is used in federal rulemaking and what it means when it is, I first collect all a dataset of 14,938 draft and final rule pairs from January 2005 through August 2024 [Note:  @fig-ej-data totals for 2024 are partial year totals].
+
+ @fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. 
+
+```{r fig-ej-data, fig.cap = "Final Rules by Whether they Address Environmental Justice"}
+knitr::include_graphics(here::here("figs", "ej-data-ejfr-1.png") ) ## 
+```
+
+
+
+
+# The Puzzel 
+
+As shown is  @fig-ej-data, the rates of U.S. federal agencies addressing environmental justice in final rules (as mandated by E.O. 12898), is low and surprisingly consistent across Republican and Democratic administrations. Appendix @fig-ej-data-pr shows the same consistency in proposed rules. Thus, it is not simply a mater of public pressure forcing Republican administrations to match Democrats. Indeed, @fig-ej-m-PR-pres  shows that, controlling for the scale of public pressure, responsiveness to demands to address EJ did not vary signifcantly across most administrations from G.W. Bush through Biden. 
+@fig-ej-m-PR-pres showed surprisingly similar rates of responsiveness to commemnts rasing (i.e., the difference between in adding EJ text to final rules when comments raised it, minuse baseline rates of adding EJ text.)
+
+```{r fig-ej-m-PR-pres , fig.cap = "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Address Environmental Justice"}
+
+knitr::include_graphics(here::here("figs", "ej-m-PR-president-median-pres-1.png") ) 
+
+```
+
+Consistency in mentions of environmental justice across administrations could have at least 4 different explanations: 
+
+1. Discussion of environmental justice in final rules could be cheap talk, pro forma compliance with E.O. 12898, unrelated to substantive policy agendas
+1. Presidential administrations could have different definitions of environmental justice that reframe it in a way that is consistent with their policy agenda. This would allow the term to be used with similar frequency despite different meanings. 
+1. The phrase environmental justice may be used in ways that is less correlated with partisan. 
+1. Presidents do not perfectly control bureaucratic agents. The persistence of engagment (or non-engagment) with 
+
+These explanations are not mutually exclusive and each may explain a portion of the lack of variation.
+
+The Heritage Foundation's Project 2025: Mandate for Leadership report does not propose simply eliminating the EPA's The Office of Environmental Justice and External Civil Rights, as it does with many agencies and offices. Instead, it suggests that the staff be reallocated to the The Office of the Administrator and to be run by a political appointee [@2025, p. 421] and Office of the General Counncil, and that EJ work should continue but be "based on
+neutral constitutional principles" [@2025, p. 441] 
+
+> there is an opportunity to redefine EJ as a tool for the agency to prioritize environmental protection efforts and assistance to communities in proximity to pollution or with the greatest
+need for additional protection. Allocations of agency resources, increased
+EPA enforcement, and/or agency distribution of grants should be based on
+neutral constitutional principles" [@2025, p. 441] 
+
+This could be consistent with several explanations: former (and possible future) Trump Administration officials could simply be aiming to assert control over the office in order to supress its influence over policymaking, or they may have a different definition of EJ and want to make sure that the office is advancing their prefered issue frame.  
+
+Definitions are contested among both activists and policymakers. 
+For example, @Lester2001 find that activists repeatedly succeeded in legitimizing their claims and getting EJ concerns on the political agenda but largely failed to push through legislation, in part due to conflicts between grassroots and national advocacy groups (p. 52)
+
+# Methods 
+
+## Hand codeing
+
+
+### Substantive Policy Change and Lobbying Success
+
+With a team of research assistants, I hand-code^[See the codebook in Appendix @sec-codebook.]  all comments from organizations with concrete policy demands on a random sample of 150 agency rules from 2005 to 2020 [50 additional rules from 2021-2024 RULES ARE STILL BEING PROCESSED], over 10,000 comments from organizations, including 179 comments from Native American Tribes and 78 from frontline EJ groups. 
+
+Table @tab-ej-winrates shows relative rates of lobbying success for different types of organizations. "Overall Success Rate" shows the share of cases that changed between draft and final as each type of commenter requested. "EJ Success Rate" shows the share of cases that changed as the commenter requested when comment's demands were coded as related to environmental justice. Some organization types --- including frontline EJ community groups, universities, religious groups, professional associations, environmental groups, and pressure groups --- are subsets of the broad "NGO" category. Trade associations, while technically nonprofits, are not included in the NGO category.  
+
+```{r ej-winrates}
+load(here::here("data", "winrate.Rdata"))
+winrates %>% 
+  mutate(`EJ Success Rate` = `EJ Success Rate` %>%
+           percent(accuracy = 1) %>% replace_na("-"),
+         `Overall Success Rate` = `Overall Success Rate` %>%
+           percent(accuracy = 1)) %>% 
+  dplyr::select(-`N raising EJ`) %>%
+  # name to nest
+  mutate(`Organization Type` = `Organization Type` %>% 
+           str_replace("(State|Tribe|City)", "Government, \\1") %>% 
+           str_replace("(Religious|Pressure Group|Professional Assn.|University|Environmental Group|Credit Union|Union|Frontline EJ)", "NGO, \\1") %>% 
+           str_replace("(Finance|Law Firm)", "Business, \\1") %>% 
+           str_replace("(NGO$|Business$)", "\\1 (Overall)")) %>% 
+arrange(`Organization Type`) %>% 
+  kable3(caption = "Hand-coded Lobbying Success by Type of Organization, 2005-2020")
+```
+
+Only law firms were more likely to get their substantive policy demands met when their comments raised EJ concerns. Tribes and Frontline EJ community groups---already the types of organizations least likely to have their substantive demands met (9% and 4%, respectively)---saw none of their substantive demands related to EJ met. NGOs, overall, and environmental groups (a subset of NGOs) were slightly less likely to see their policy demands met when these demands were explicitly linked to EJ. The most successful types of organizations overall---Trade Associations, States, Cities, and Banks---did not use EJ language in the hand-coded sample. 
+Because EJ demands often oppose the status quo, this aligns with 
+<!--the findings of Chapter @influence and -->
+research showing that advocating for the status quo is one of the strongest predictors of lobbying success [@Baumgartner2009].
+This should not be taken as evidence that tribes and frontline groups are never influential. Rare events---like comments raising EJ concerns on rules that did not address EJ---are not captured by this small random sample of rules.
+
+Table @tab-ej-winrates raises an additional question:  are less responsive to tribes and frontline EJ groups *because* they are marginalized in the policy process *or* because their demands are more difficult to accommodate? For example, is a mainstream environmental group asking for more safety regulations related to Uranium mining more likely to be successful than a Native Tribe making the same request? Or is the observed differential lobbying success rates a result of these groups asking for different things? For example, the  mainstream environmental group asking for more safety regulations, but the Tribe is asking for regulatory authority over mining affecting tribal lands to be returned to Tribal governments (a request that an agency of a settler government may perceived as less legitimate and thus be less likely to grant). 
+
+
+
+## Priors 
+
+While my coding dimensions of environmental justice is largely inductive, I started with some expectations of dimensions of environmental justice based in prior work. 
+
+Most prominent is the distinction between distributive and proceedural justice. 
+
+Procedural justice is discussed both in terms of ex-ante inclusion in policy processes and ex post maters of equity in implementation and enforcements [@Boone2008].
+For example, @Konisky2017 find that regulatory enforcement is correlated with political mobilization around EJ issues.
+
+Another dimension of variation is racialization. Modern environmental justice advocacy has roots in the older organizing frame of environmental racism. While the movement has broadened racial inequality still features prominently in activism and scholarship. Policies' exclusion of race is a frequent target of activist pressure. 
+@Abel2015 find that poorer and less White states have more developed EJ policies.
+
+Additionally, it quickly became clear that distributive justice cliams opperated at different geographic scales.
+
+A major difference between national advocacy groups and more traditional EJ groups was the scale of impacts they addressed. Traditional groups commented on global or national averages of harms and benefits that were presumed to benefit marginalized communities most harmed by the pollution. 
+
+In contrast local groups tended to focus on more targeted policies (e.g., state implimentation plans or air quality attainment zones). Even when commenting on national policies, they cited specific impacts in their area. This is especially true for tribes and other Native groups. 
+
+
+## Regression model 
+
+
+
+# Findings
+
+## Policymakers Engaging with Environmental Justice is correlated with Substantive Policy Success {#sec-cor}
+
+## Emerging Dimensions of Environmental Justice Frame {#sec-dim}
+
+In this section, I inductively identify salient dimensions of environmental justice raised in public comments. Inequalies are correlated.
+
+### Spatial 
+
+Many environmental justice claims have to do with the unequal spacial distribution of environmental harms. Commenters assert an extremely wide variety of spatially-disparate impacts as matters of environmental justice. 
+
+
+#### Unequal spatial distribution of impacts
+
+One of the major evolution from its origins in environmental racism is a great expansion of the groups claiming to be disproportionately affected. It no longer needs to assert marginalization or historic oppression. Commenters assert injustices when one county is impacted more than another or if urban areas are impacted more than rural areas, or vice versa. 
+
+For example, a rural county in Oregon claimed that logging restrictions due to endangered species conservation increased the risk of wildfires, which disproportionately impact rural communities: 
+
+> Smoke from such wildfires substantially impacts public health. These serious health impacts are an environmental justice issue that many rural counties throughout Oregon face because of the federal government’s failure, or inability, to responsibly manage forests, due, in large part, to unnecessary and/or unwarranted restrictions that all center around the spotted owl... [(Douglas County, 2008)](https://www.regulations.gov/comment/FWS-R1-ES-2020-0050-0539)
+
+
+#### Hotspots 
+
+One class of spacial problem is when standards regulate averages or across a geography or  allow averaging or trading across pollution sources. In these cases, certain areas can become "hot spots," where the standards are exceeded, but averaged or offset with other places that fall below the standard to achieve legal compliance. 
+
+For example, commenters often raise environmental justice concerns when to pollution sources that affect them are averaged or purchase offsets from more distant sources, meaning that the closer source will pollute more than it would have if each source was required to meet the standard alone. 
+
+#### Unequal baselines 
+
+Some commenters take inequalities in exposure to environmental harms to argue that any average reduction in pollution that affects large areas will disproprtiontely benefit EJ communities, and thus counts as advancing environmental justice. This argument is frequently made by mainstream national advocacy groups to advance policies beased on their general impacts, rather than paying specific attention to localized impacts. 
+
+CEQ-2019-0003-79700
+
+Big green advocacy groups CEQ-2019-0003-48169
+
+### Idenities
+
+>  People from
+disadvantaged populations are more likely
+to be employed in occupations with higher
+levels of exposure (e.g., mining, construction,
+manufacturing, agriculture, certain service
+sector occupations) and to live in more highly
+contaminated communities. The reality of
+this unequal burden is not just a health issue,
+but an issue of environmental justice. While all Americans now carry many
+foreign chemicals in their bodies, women
+often have higher levels of many toxic and
+hormone-disrupting substances than do
+men...Children of all ages are considerably more
+vulnerable than adults... [(The President’s Cancer Panel, uploaded as part of a comment by Frank Kleinke, 2018)](https://www.regulations.gov/comment/AMS-NOP-15-0012-61822)
+
+#### Gender and Age
+
+#### Language and culture
+
+Language and culture overlap with specific geographies, especially with Native lands. Native commenters frequently assert harm to certain locations as harms to their culture. 
+
+CEQ-2019-0003-124293 (also spatial)
+CEQ-2019-0003-83366
+[Posta Band of Mission Indians](CEQ-2019-0003-168814)
+
+
+
+### Cumulative Impacts 
+
+While typically focused on multiple geographically proximate impacts, cumulative impacts referrers to many things. A classic example is how permitting decisions for a facility should account for nearby facilities that impact the same area. However, it can also calls to included background sources of polution (e.g., naturally occurring or historic persisting) For example, in can refer to adding up exposure at home and at work. 
+
+#### Cumulative similar impacts 
+
+The Elimination of the Cumulative Impacts Analysis Raises Environmental Justice Concerns That Should Executive Order 12898 requires that each agency ensure that its actions foster environmental justice justice concerns.  CEQ-2019-0003-160397 
+
+
+#### Cumulative disporate impacts 
+
+Airport noise
+
+
+### Proceedural injustice 
+
+In the hand-coded sample, commenters raised procedural justice issues on policies about procedures, especially reforms to the National Environmental Policy Act, which proscribes how other agencies conduct environmental review. 
+
+
+Overlapping with the focus on NEPA, many  of the proceedural justice claims came from tribes asseting consultation rights. CEQ-2019-0003-84724
+CEQ-2019-0003-171251
+CEQ-2019-0003-169898
+
+### Enforcement 
+
+While procedural and enforcement injustices get significant attention in academic texts, advocates in the rulemaking process rarealy raised concerns about enforcement. This is likely due to the forum which is soliciting comments on draft policy, leading people to focus on substance. 
+
+## Environmental Justice Frames Recognized by Policymakers
+
+In this section I disaggregate
+
+### Empty lipservice 
+
+As one commenter noted on the Trump Administration's NEPA reforms: 
+
+> We find that many pages of most NEPA
+disclosure documents are devoted to boilerplate language regarding historic preservation;
+environmental justice; ... and other issues. [(Oregon Wild, 2020)](https://www.regulations.gov/comment/CEQ-2019-0003-161185)
+
+### Ways that Agencies Dismissing EJ Claims
+
+#### Minimizing policy impacts relative to trends
+
+> EPA believes that the power sector is already on path to achieve the CO2 reductions required by the CPP, therefore the EPA does not believe it would have any significant impact on EJ effected communities. [(EPA-HQ-OAR-2017-0355, 2019)](https://www.federalregister.gov/documents/2019/07/08/2019-13507/repeal-of-the-clean-power-plan-emission-guidelines-for-greenhouse-gas-emissions-from-existing)
+
+The Biden EPA used a similar logic, emphasized that, while the relative impact of the policy would be to increase pollution, broader downward trends meant that exposure would still be lower in the future (though not as low as it would be under the prior policy regime): 
+
+> ...there is potential for some geographic areas and demographic groups to experience small increases in ozone concentrations relative to the baseline levels which are projected to be substantially lower than today's levels. [(EPA-HQ-OAR-2023-0072-8244, 2024)](https://www.regulations.gov/document/EPA-HQ-OAR-2023-0072-8244)
+
+
+#### Ballencing 
+
+For example, the Trump Adminisrtation's repeal of the clean Power Plan noted that the policy would lead to increase pollution in some areas, but argued that they were offset by improvements in other areas: 
+
+> While the EPA expects areas in the southeastern U.S. to experience a modest increase in fine particle levels, areas including the Midwest will experience reduced levels of PM, yielding significant benefits in the form of fewer premature deaths and illnesses. On balance, the positive benefits of this action significantly outweigh the estimated disbenefits.
+
+
+This kind of large scale averaging that allows local pollution hot spots has been one of the main compaints of environmental justice advocates from the beginning of the movement 
+
+
+#### Citing limits on harms 
+
+Another genre of response aims to address concerns by emphasizing that the policy limits the level of inequality it might permit. For example, the Biden EPA addressed complaints that emissions trading could lead to pollution hot spots, but asserted that the policy included backstops intended to limit inequalities: 
+
+> The EPA is cognizant of these concerns and believes that emission trading and averaging are not necessarily incompatible with environmental justice. The EPA is including limitations on the use of compliance flexibilities in state plans that should help address these EJ concerns.
+
+When weakening or repealing regulations, agencies often cite other policies as backstops to that minimize the harms of removing federal regulation. For example, the Bush EPA claimed that deregulating sources of hazardous air pollution would have no effect on nearby minority and low-income communities because polluters were still required to have a plan, just not required to follow it.
+
+> "The only difference from current regulation is that the source is not required to follow the plan." 
+
+### "Job-killing" regulation as an environmental justice issue
+
+When the Trump Administration repealed the Clean Power Plan (CPP) regulations on power plants (Electric Generating Unites or EGUs), the Trump EPA advanced an argument that, despite harming air quality, the repeal served environmental justice because it preserved jobs and lowered utility bills in low income communities near power plants. This section of the proposed rule on environmental justice then went on to link job loss to health risks and substance abuse: 
+
+> low-income and minority communities located in proximity to EGUs may have experienced an improvement in air quality as a result of the emissions reductions. However, the EPA did not address the potential distribution of compliance costs associated with the CPP...Low-income households typically spend a greater share of their household income on energy, and to the extent that this action reduces energy costs, those low-income households will experience lower energy bills...While employment effects are not experienced uniformly across the population and may be offset by new opportunities in different sectors, localized impacts could have adversely affected individuals and their communities... In addition, past research has suggested that involuntary job loss may increase risks to health, of substance abuse, and even of mortality. [(EPA-HQ-OAR-2017-0355, 2017)](https://www.federalregister.gov/documents/2017/10/16/2017-22349/repeal-of-carbon-pollution-emission-guidelines-for-existing-stationary-sources-electric-utility)
+
+
+
+## Evironmental Justice Frames Associted with Substantive Policy Change
+
+In this section I disaggreate the results from section @sec-cor by the frames identified in section @sec-dim to investigate wich are most associated with substantive policy change. 
+
+### TBD
+
+CEQ-2019-0003-82231
+
+From Environmental history action collective. They give specific critiques that align well with EJ concerns from frontline groups, and they dedicate a portion of their reasoning in their comment to explaining EJ impacts of weakening NEPA
+CEQ-2019-0003-158984
+
+## Substantive vs. Identity-based Discrimination 
+
+By dissaggregating the diverse meanings behind demands for environmental justice, I now turn to whether relatively national advocacy groups are advancing similar demands but with different levels of success, or if dispartities in success can be explained by differences in demands. 
+
+
+
+
+
+\clearpage
+
+# (APPENDIX) Appendix {-} 
+
+## Appendix A: Tracing Ideas Through Rulemaking
+
+
+
+### Rules where the proposed rule did not address EJ, but comments did, and the Final Rule did.
+
+
+EPA-R09-OAR-2010-0120	Revisions to California State Implementation Plans: Imperial County Air Pollution Control District:
+
+>"EPA agrees it is important to consider environmental justice in our actions and we briefly addressed environmental justice principles in our proposal TSD. (171) ..." 
+
+BUT "Environmental Justice" does not appear in the PR, and THERE IS NO OTHER TECHNICAL SUPPORTING DOCUMENT ON REGULATIONS.GOV. FOOTNOTE 171 REFERENCES THE PROPOSED RULE.
+
+> This action will not have disproportionately high and adverse human health or environmental effects on minority, low-income or Tribal populations because it increases the level of environmental protection for all affected populations without having any disproportionately high and adverse human health or environmental effects on any population, including any minority or low-income population. Specially, EPA's limited approval and limited disapproval of Regulation VIII would have the affect of strengthening environmental requirements throughout ICAPCD, and would not relax environmental requirements in any area. Thus it promotes environmental justice by increasing the level of human health and environmental protection for an area where, **as the commenters note, relatively large portions of the population are low income and/or minority**."
+
+---
+
+EPA-R05-OAR-2007-0587, Oct 19, 2010, Final Approval of the Wisconsin NOx RACT Rules (NR 428), did not mention environmental justice, but recognized a comment that raised hotspot concerns. The agency spent several pages of the preamble to the final rule attempting to rebut the commenter's concerns. did substantively modify the rule in response. 
+
+> "The commenter also states that multi facility averaging threatens environmental justice."
+
+
+
+---
+
+EPA-R05-OAR-2010-0034	Final Approval of PM 2.5 Clean Data Determination for Saint Louis: 
+
+> "significant source of PM2.5 emissions in the Saint Louis area, and that the plant's operations raise environmental justice concerns. EPA reviewed air quality data throughout the Saint Louis area, including environmental justice areas."
+
+--
+
+
+EPA-HQ-OAR-2003-0048	National Emission Standards for Hazardous Air Pollutants: Plywood and Composite Wood Products	
+> The rule also does not involve special consideration of environmental justice related issues as required by E.O. 12898."
+
+---
+
+EPA-HQ-OAR-2004-0094	National Emission Standards for Hazardous Air Pollutants: General Provisions	Impacts
+
+> Comment: One commenter stated that EPA failed to comply with Executive Order 12898 on Environmental Justice. The commenter asserts that the amendments will adversely affect minority and low income communities around the sources.
+
+> Response: Executive Order 12898 establishes a Federal policy for incorporating environmental justice into Federal agency actions by directing agencies to identify and address, as appropriate, disproportionately high and adverse human health or environmental effects of their programs, policies and activities on minority and low-income populations. The EPA has considered the impact of the proposal on minority and low income populations. **We do not believe that these amendments will have any adverse effects** on emissions during periods of SSM. Therefore, there should not be any adverse impact **on minority and low income populations** as a result of these amendments. The amendments do not affect the underlying requirement to minimize emissions during SSM events. **Owners or operators are still required to develop SSM plans to address emissions** during these periods. They are required to report immediately when the plans are not followed and semiannually when the plans are followed and emission limitations are exceeded (or could have been in the case of malfunctions) and describe steps taken to minimize emissions. **The only difference from current regulations is that the source is not required to follow the plan**, especially when the situation may call for other action or when safety considerations override following the plan as written.
+
+---
+
+Enhancements to Emergency Preparedness Regulations	NRC-2008-0122
+
+> The NRC requested public comments on any environmental justice considerations that may be related to this rule and no comments were received.
+
+BUT, a [comment by Richard Webster & Manna Jo Greene on Behalf of Hudson River Sloop Clearwater, Inc.](https://beta.regulations.gov/comment/NRC-2008-0122-0088) did address EJ:
+
+> The rules and guidance are based on a fantasy world in which the terrain around nuclear power stations is perfectly flat, radiation plumes do not move up and down, the wind  blows at the same speed in a constant direction throughout an accident, and most people follow the instructions they are given about the need to evacuate.
+
+> Need for Site-Specific Analysis of Transport Dependent Populations:
+**The present guidance suggests that because 50% of residents would offer rides to those in need, approximately 50% of the transit dependent population in the EPZ would rideshare.** Criteria for Development of ETE Studies (April23, 2009) at 13. **This assumption fails to account for the likely separation of transit dependent environmental justice populations from more affluent populations. Furthermore, it takes no account of attitudes towards race and potential reluctance of whites to offer rides to African- Americans.** Instead of presuming that 50% of the transit dependent population will ride- share, the presumption should be that only a small percentage will rideshare unless the licensee can show that there are no geographical concentrations of transit dependent populations and that there is no racial or sociological bias with regard to ridesharing.
+
+> ...people would be foolish to follow the directions of first responders if they are based on totally unrealistic modeling. Indeed, it is doubtful whether people would follow instructions even if they were based on the best predictions possible. **The experiences during the hurricane Katrina also underline that it is even more doubtful whether the response planned for environmental justice communities would actually materialize.**
+
+---
+
+Atlantic Highly Migratory Species: Atlantic Shark Management Measures; Final Amendment 5b	NOAA-NMFS-2013-0070	
+
+> We received a total of 76 individual written comments on the proposed rule from fishermen, states, and other interested parties during the public comment period, including one comment from EarthJustice that included signatures from 19,716 individuals and another comment from Oceana that included signatures from 13,144 individuals.
+
+>The EPA submitted a comment recommending additional environmental justice information...and include in the EIS whether the proposed alternatives have any potential for disproportionate adverse impacts to minority and low-income populations. The EPA also recommended that the EIS include the approaches used to foster public participation by these populations and describe outreach conducted to all other communities that could be affected by the project, because rural communities may be among the most vulnerable to health risks associated with the project.
+
+> NMFS appreciates these recommendations from the EPA and has added additional information in the environmental justice discussion in Section 9.4 of the FEIS.
+
+Between the time of the proposed rule in 2013 and the final Rule and Final Environmental Impact Statement (FEIS) in 2017, 
+
+> Executive Order 12898 requires agencies to identify and address disproportionately high and adverse environmental effects of its regulations on minority and low-income populations. To determine whether environmental justice concerns exist, the demographics of the affected area should be examined to ascertain whether minority populations and low-income populations are present. If so, a determination must be made as to whether implementation of the alternatives may cause disproportionately high and adverse human health or environmental effects on these populations.
+Community profile information are available in the 2006 Consolidated HMS FMP (Chapter 9), a recent report by MRAG Americas, and Jepson (2008) titled “Updated Profiles for HMS Dependent Fishing Communities” (Appendix E of Amendment 2 to the 2006 Consolidated HMS FMP), and in the **2015** HMS SAFE Report. The MRAG report updated community profiles presented in the 2006 Consolidated HMS FMP, and provided new social impacts assessments for HMS fishing communities along the Atlantic and Gulf of Mexico coasts. The 2011 and 2012 SAFE Reports (NMFS 2011 and NMFS 2012) include updated census data for all coastal Atlantic states, and some selected communities that are known centers of HMS fishing, processing or dealer activity. Demographic data indicate that coastal counties with fishing
+9-9
+communities are variable in terms of social indicators like income, employment, and race and ethnic composition.
+The preferred alternatives were selected to minimize ecological and economic impacts and provide for the sustained participation of fishing communities. The preferred alternatives would not have any effects on human health nor are they expected to have any disproportionate social or economic effects on minority and low-income communities.
+
+They also cited research published in the same year as the draft rule:
+
+>Jepson and Colburn (2013) developed social indicators of vulnerability and resilience for 25 communities in the U.S. southeast and northeast regions selected for having a greater than average number of HMS permits associated with them.
+
+---
+
+Fisheries of the Exclusive Economic Zone Off Alaska: Chinook Salmon Bycatch Management in Bering Sea Pollock Fishery	NOAA-NMFS-2010-0032
+
+>Comment 79: NOAA has the responsibility to modify the Council's recommendations to fulfill Federal obligations under ANILCA, ESA, Pacific Salmon Treaty, Environmental Justice, and Federal responsibility to tribal governments. NOAA should fulfill these obligations by not implementing Amendment 91 and insisting on the smaller bycatch rates proposed and supported by the most directly impacted communities.
+
+>Response: NMFS has complied with all applicable laws, Executive Orders, and international obligations in approving and implementing Amendment 91, as documented in the EIS and ROD (see ADDRESSES).
+
+> Comment 96: Subsistence users of the Yukon River, the vast majority of whom are Alaska Native and have the lowest per capita income in the United States, are clearly bearing a disproportionately high adverse environmental impact under Amendment 91. Under the concept of Environmental Justice, why does Amendment 91 result in tribal subsistence users bearing virtually all of the consequences resulting from past, present, and future wasteful bycatch by the pollock fleet? This violates all measures of fairness and fails to satisfy any consideration of environmental justice. The pollock fleet can best afford to make sacrifices in order to accomplish meaningful reductions in Chinook salmon bycatch.
+
+> Response: NMFS acknowledges the comment. The EIS prepared for this action analyzes the environmental justice impacts of this action (see ADDRESSES).
+
+---
+
+EPA-R05-OAR-2020-0055
+Removal of Ohio Nuisance Provision (3745-15-07) final rule	
+
+>OAC 3745-15-07 [Ohio State Law] prohibits the “emission or escape into the open air from any source or sources whatsoever, of smoke, ashes, dust, dirt, grime, acids, fumes, gases, vapors, odors, or any other substances or combinations of substances, in such manner or in such amounts as to endanger the health, safety or welfare of the public, or cause unreasonable injury or damage to property.”
+
+> On March 23, 2020, EPA proposed, under the authority of section 110(k)(6) of the CAA, to remove Ohio's nuisance rule from the Ohio State Implementation Plan (SIP) because it does not have a reasonable connection to the attainment and maintenance of the national ambient air quality standard (NAAQS) and EPA erred in approving it as part of the Ohio SIP.
+
+> Comment 10: Commenters state that the NPRM would harm already vulnerable Ohioans by eliminating an important **environmental justice** tool. Commenters also raise concerns with the potential impact on other sensitive populations such as children, the elderly, and individuals with various health issues, including respiratory illnesses.
+
+> Response: The purpose of this rulemaking action is to remove OAC 3745-15-07 from the Ohio SIP because it is not related to the implementation, maintenance, and enforcement of the NAAQS. This rulemaking action does not invalidate the Ohio law or affect its applicability to Ohio sources. **Facilities located in Ohio are still subject to the state nuisance rule.** EPA supports programs and activities that promote enforcement of health and environmental statutes in areas with minority populations and low-income populations and the protection of children, the elderly, and other vulnerable populations.
+
+\clearpage
+
+
+## Appendix B: Additional Descriptives 
+
+
+@fig:ej-pairs shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that "environmental justice" appeared in the text. Triangles indicate that it did not. Solid lines indicate change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year---each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.
+
+```{r ej-pairs, out.width="100%",  fig.cap = "Draft and Final Rule Pairs"}
+include_graphics(here::here("figs", "ej-pairs-1.png"))
+```
+
+
+
+@fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. @fig-ej-data-pr shows these rates of mentioning environmental justice in proposed rules---i.e., the baseline rates of addressing environmental justice, prior to pressure during the public comment period. 
+
+```{r fig-ej-data-pr, fig.cap = "Proposed and Final Rules by Whether they Address Environmental Justice"}
+
+knitr::include_graphics(here::here("figs", "ej-data-ejpr-1.png") ) ##  
+```
+
+
+\clearpage
+
+ Rates of Addressing EJ by President and Agency
+
+Table @tab-ej-rates-president shows the total number of final rules and the percent that address EJ by President 
+
+```{r tab-ej-rates-president}
+load(here::here("data", "ej_rates.Rdata"))
+
+ej_rates_president %>% 
+  knitr::kable(format = "latex",# "pipe", # "latex"?
+                     caption  = 'Rates of Mentioning "Environmental Justice" in Final Rules',
+                     booktabs = T,
+                     #linesep = "\\addlinespace",
+                     align = "l") %>%
+        kable_styling(font_size = 10, 
+                      full_width = F,
+                      latex_options = "repeat_header")
+```
+
+
+
+Table @tab-ej-rates-agency shows the total number of final rules and the percent that address EJ for the twenty agencies that most frequently mention EJ in final rules. 
+
+```{r ej-rates-agency}
+load(here::here("data", "ej_rates.Rdata"))
+
+ej_rates %>% 
+  knitr::kable(format = "latex",# "pipe", # "latex"?
+                     caption  = 'Rates of Mentioning "Environmental Justice" in Final Rules',
+                     booktabs = T,
+                     #linesep = "\\addlinespace",
+                     align = "l") %>%
+        kable_styling(font_size = 10, 
+                      full_width = F,
+                      latex_options = "repeat_header")
+```
+
+
+
+### Rates of Addressing EJ by Agency and President
+
+Table @tab-ej-rates-presidnet-agency shows the total number of final rules and the percent that address EJ for the twenty agencies that most frequently mention EJ in final rules. 
+
+```{r ej-rates-president-agency}
+load(here::here("data", "ej_rates.Rdata"))
+
+ej_rates_president_agency %>% 
+  knitr::kable(format = "latex",# "pipe", # "latex"?
+                     caption  = 'Rates of Mentioning "Environmental Justice" in Final Rules',
+                     booktabs = T,
+                     #linesep = "\\addlinespace",
+                     align = "l") %>%
+        kable_styling(font_size = 10, 
+                      full_width = F,
+                      latex_options = "repeat_header")
+```
+
+
+<!--
+The Forest Service (FS) has by far the highest predicted baseline rate of adding EJ to rules. This may be because the forest service is mainly in
+the business of managing forests, leasing timber rights, and controlling
+wildfires. These types of decisions have acute distributional
+effects. Forest Service rule-writers may also simply have an institutional practice of addressing E.O.12898. 
+Similarly, the Federal
+Railroad Administration,  Federal Highway
+Administration Federal Motor Carrier Safety Administration all have large baseline rates of adding EJ to final rules. These agencies make decisions about infrastructure projects with implications for
+neighborhood environments and air quality. Environmental justice may
+often come up.
+Research agencies, including the Nuclear Regulatory Commission (NRC) and National Oceanographic and Atmospheric Administration (NOAA), also have low but significant baseline rate of adding EJ to final rules.
+-->
+
+\clearpage
+
+
+### Rates of Change With and Without Comments Raising Environmental Justice
+
+```{r ej-descriptive, out.width="49%", fig.cap = "Rates of Change Between Draft and Final Rule", fig.subcap=c("Proposed Rules with No EJ Text", "Proposed Rules with EJ Tex")}
+cap = "Rates of Change Between Draft and Final Rule"
+subcap = c("Proposed Rules with No EJ Text", "Proposed Rules with EJ Tex")
+
+include_graphics(here::here("figs", "ej-PR-winrate-1.png"))
+
+include_graphics(here::here("figs", "ejejPR-winrate-1.png"))
+
+#include_graphics(here::here("figs", "ej-PR-winrate-agency-1.png"))
+```
+
+\clearpage
+
+
+# Appendix C: Additional Results
+
+ @fig-ej-m-PR-pres showed surprisingly similar rates of responsiveness to commemnts rasing (i.e., the difference between in adding EJ text to final rules when comments raised it, minuse baseline rates of adding EJ text.)
+Figures @fig-ej-m-PR-president and @fig-ej-mejPR-president show these same results but include point estimates for the baseline condition (adding or changing EJ language when comments did not raise EJ) and the treatment condition  (adding or changing EJ language when comments did raise EJ). They show low baseline rates of adding EJ languge when it was not present in the proposed rule, but much higher rates of changing EJ languge when it was present in the proposed rule. In all cases, comments raising EJ concerns is associated with higher rate of addtion or change, respectively, across administrations. 
+
+
+```{r fig-ej-m-PR-president, fig.cap = "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Not Address Environmental Justice"}
+knitr::include_graphics(here::here("figs", "ej-m-PR-president-median-1.png") ) 
+```
+
+```{r fig-ej-mejPR-president, fig.cap = "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Address Environmental Justice"}
+# # ej-m-PR-president-median
+# ej-m-PR-president-median-pres 
+knitr::include_graphics(here::here("figs", "ej-mejPR-president-median-1.png") ) 
+
+```
+
+
+
+# Appendix E: Codebook {#sec-codebook}
+
+```{r child = here::here("99-codebook.md")  |> str_replace("University of Michigan Dropbox/Devin Judge-Lord/ej", "dissertation") }
+```
