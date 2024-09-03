@@ -117,7 +117,10 @@ load(here::here("models", "ej_models.Rdata"))
 #equatiomatic::extract_eq(m_PR_agencyFE)
 ```
 
-```{r tbl-ej-tables, cache=FALSE}
+```{r , cache=FALSE}
+#| label: tbl-ej-tables
+#| tbl-cap: "Logit Regression Predicting Change in Rule Text" 
+
 rowsFE <- tibble(
   term = c("Dependent Variable"),
   `1` = c("EJ Text Added"), 
@@ -141,13 +144,11 @@ modelsFE <- list(
 
 
 modelsummary::modelsummary( modelsFE, 
-                            title = "Logit Regression Predicting Change in Rule Text",
                             stars = TRUE, 
                             coef_map = cm,
                             gof_omit = "R.*",
                           add_rows = rowsFE, 
-                          notes = "Data subset to rules where the proposed rule did not mention environmental justice. Reference President = Biden.",
-                          output = output) 
+                          notes = "Data subset to rules where the proposed rule did not mention environmental justice. Reference President = Biden.") 
 ```
 
 
@@ -206,7 +207,7 @@ Other approaches to identifying the commenter's relationship with policy changes
 
 ```{r}
 #| label: "tbl-ej-winrates"
-
+#| tbl-cap: "Hand-coded Lobbying Success by Type of Organization, 2005-2020"
 
 load(here::here("data", "winrate.Rdata"))
 
@@ -223,7 +224,7 @@ winrates %>%
            str_replace("(Finance|Law Firm)", "Business, \\1") %>% 
            str_replace("(NGO$|Business$)", "\\1 (Overall)")) %>% 
 arrange(`Organization Type`) %>% 
-  kable3(caption = "Hand-coded Lobbying Success by Type of Organization, 2005-2020")
+  kable()
 ```
 
 Only law firms were more likely to get their substantive policy demands met when their comments raised EJ concerns. Tribes and Frontline EJ community groups---already the types of organizations least likely to have their substantive demands met (9% and 4%, respectively)---saw none of their substantive demands related to EJ met. NGOs, overall, and environmental groups (a subset of NGOs) were slightly less likely to see their policy demands met when these demands were explicitly linked to EJ. The most successful types of organizations overall---Trade Associations, States, Cities, and Banks---did not use EJ language in the hand-coded sample. 
@@ -370,6 +371,8 @@ This report was cited as a reason to limit workplace exposure in a wide range of
 
 #### Gender and Age
 
+
+
 #### Language and culture
 
 Language and culture overlap with specific geographies, especially with Native lands. Native commenters frequently assert harm to certain locations as harm to their culture. 
@@ -385,6 +388,7 @@ CEQ-2019-0003-83366
 
 While typically focused on multiple geographically proximate impacts, cumulative impacts referrers to many things. A classic example is how permitting decisions for a facility should account for nearby facilities that impact the same area. However, a call to address cumulative impacts may also include background sources of pollution (e.g., naturally occurring or historic persisting). For example, it can refer to adding up exposure at home and at work. 
 
+<!--
 #### Cumulative similar impacts 
 
 > The Elimination of the Cumulative Impacts Analysis Raises Environmental Justice Concerns...Executive Order 12898 requires that each agency ensure that its actions foster environmental justice concerns.  CEQ-2019-0003-160397 
@@ -396,7 +400,7 @@ EPA-HQ-OAR-2003-0048 National Emission Standards for Hazardous Air Pollutants: P
 #### Cumulative disparate impacts 
 
 Airport noise
-
+-->
 
 ### Procedural injustice 
 
@@ -656,7 +660,7 @@ Removal of Ohio Nuisance Provision (3745-15-07) final rule
 
 @fig-ej-pairs shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that "environmental justice" appeared in the text. Triangles indicate that it did not. Solid lines indicate a change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year---each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.
 
-```{r ej-pairs, out.width="100%",  fig.cap = "Draft and Final Rule Pairs"}
+```{r fig-ej-pairs, out.width="100%",  fig.cap = "Draft and Final Rule Pairs"}
 include_graphics(here::here("figs", "ej-pairs-1.png"))
 ```
 
@@ -678,12 +682,13 @@ knitr::include_graphics(here::here("figs", "ej-data-ejpr-1.png") ) ##
 
 ```{r}
 #| label: tbl-ej-rates-president
-#| 
+#| tbl-cap: 'Rates of Mentioning "Environmental Justice" in Final Rules'
+
+
 load(here::here("data", "ej_rates.Rdata"))
 
 ej_rates_president %>% 
   knitr::kable(format = "latex",# "pipe", # "latex"?
-                     caption  = 'Rates of Mentioning "Environmental Justice" in Final Rules',
                      booktabs = T,
                      #linesep = "\\addlinespace",
                      align = "l") %>%
@@ -698,12 +703,12 @@ ej_rates_president %>%
 
 ```{r}
 #| label: tbl-ej-rates-agency
+#| tbl_cap:  'Rates of Mentioning "Environmental Justice" in Final Rules'
 
 load(here::here("data", "ej_rates.Rdata"))
 
 ej_rates %>% 
   knitr::kable(format = "latex",# "pipe", # "latex"?
-                     caption  = 'Rates of Mentioning "Environmental Justice" in Final Rules',
                      booktabs = T,
                      #linesep = "\\addlinespace",
                      align = "l") %>%
@@ -718,12 +723,12 @@ ej_rates %>%
 
 ```{r}
 #| label: tbl-ej-rates-president-agency
+#| tbl-cap: 'Rates of Mentioning "Environmental Justice" in Final Rules'
 
 load(here::here("data", "ej_rates.Rdata"))
 
 ej_rates_president_agency %>% 
   knitr::kable(format = "latex",# "pipe", # "latex"?
-                     caption  = 'Rates of Mentioning "Environmental Justice" in Final Rules',
                      booktabs = T,
                      #linesep = "\\addlinespace",
                      align = "l") %>%
