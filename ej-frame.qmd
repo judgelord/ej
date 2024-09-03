@@ -151,7 +151,7 @@ modelsummary::modelsummary( modelsFE,
 ```
 
 
-```{r fig-ej-m-PR-pres}
+```{r}
 #| label: fig-ej-m-PR-pres
 #| fig-cap: "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Address Environmental Justice"
 #| out-width: 50%
@@ -167,9 +167,8 @@ Consistency in mentions of environmental justice across administrations could ha
 1. The phrase environmental justice may be used in ways that are less correlated with partisanship than its historic roots in environmental racism discourse. 
 1. Presidents do not perfectly control bureaucratic agents. The persistence of engagement (or non-engagement) with 
 
-These explanations are not mutually exclusive, and each may explain a portion of the lack of variation.
-
-The Heritage Foundation's Project 2025: Mandate for Leadership report does not propose simply eliminating the EPA's Office of Environmental Justice and External Civil Rights, as it does with many agencies and offices. Instead, it suggests that the staff be reallocated to the Office of the Administrator and to be run by a political appointee [@2025, p. 421] and Office of the General Council and that EJ work should continue but be "based on
+These explanations are not mutually exclusive, and each may explain a portion of the lack of variation. For example, 
+the Heritage Foundation's Project 2025: Mandate for Leadership report does not propose simply eliminating the EPA's Office of Environmental Justice and External Civil Rights, as it does with many agencies and offices. Instead, it suggests that the staff be reallocated to the Office of the Administrator and to be run by a political appointee [@2025, p. 421] and Office of the General Council and that EJ work should continue but be "based on
 neutral constitutional principles" [@2025, p. 441] 
 
 > [T]here is an opportunity to redefine EJ as a tool for the agency to prioritize environmental protection efforts and assistance to communities in proximity to pollution or with the greatest
@@ -177,10 +176,8 @@ need for additional protection. Allocations of agency resources increased
 EPA enforcement and/or agency distribution of grants should be based on
 neutral constitutional principles" [@2025, p. 441] 
 
-This could be consistent with several explanations: former (and possible future) Trump Administration officials could simply be aiming to assert control over the office in order to suppress its influence over policymaking, or they may have a different definition of EJ and want to make sure that the office is advancing their preferred issue frame.  
+This could be consistent with several explanations: former (and possible future) Trump Administration officials could simply be aiming to assert control over the office in order to reduce its influence over policymaking, or they may have a different definition of EJ and want to make sure that the office is advancing their preferred issue frame.  Investigating how Trump administration officials responded to various EJ issue frames advanced in public comments is one way to better understand how influential these frames are (if at all) and how to interpret variation in their use by federal agencies. 
 
-Definitions are contested among both activists and policymakers. 
-For example, @Lester2001 find that activists repeatedly succeeded in legitimizing their claims and getting EJ concerns on the political agenda but largely failed to push through legislation, in part due to conflicts between grassroots and national advocacy groups (p. 52)
 
 # Methods 
 
@@ -311,6 +308,7 @@ knitr::include_graphics(here::here("figs", "mo1ej-obama.png"))
 
 
 
+\clearpage 
 
 ## Emerging Dimensions of Environmental Justice Frame {#sec-dim}
 
@@ -656,7 +654,7 @@ Removal of Ohio Nuisance Provision (3745-15-07) final rule
 # Additional Descriptives 
 
 
-@fig:ej-pairs shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that "environmental justice" appeared in the text. Triangles indicate that it did not. Solid lines indicate a change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year---each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.
+@fig-ej-pairs shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that "environmental justice" appeared in the text. Triangles indicate that it did not. Solid lines indicate a change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year---each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.
 
 ```{r ej-pairs, out.width="100%",  fig.cap = "Draft and Final Rule Pairs"}
 include_graphics(here::here("figs", "ej-pairs-1.png"))
@@ -678,7 +676,7 @@ knitr::include_graphics(here::here("figs", "ej-data-ejpr-1.png") ) ##
 
 @tbl-ej-rates-president shows the total number of final rules and the percent that address EJ by President 
 
-```{r tbl-ej-rates-president}
+```{r}
 #| label: tbl-ej-rates-president
 #| 
 load(here::here("data", "ej_rates.Rdata"))
@@ -698,7 +696,7 @@ ej_rates_president %>%
 
 @tbl-ej-rates-agency shows the total number of final rules and the percent that addresses EJ for the twenty agencies that most frequently mention EJ in final rules. 
 
-```{r ej-rates-agency}
+```{r}
 #| label: tbl-ej-rates-agency
 
 load(here::here("data", "ej_rates.Rdata"))
@@ -718,7 +716,7 @@ ej_rates %>%
 
  @tbl-ej-rates-president-agency shows the total number of final rules and the percent that addresses EJ for the twenty agencies that most frequently mention EJ in final rules. 
 
-```{r ej-rates-president-agency}
+```{r}
 #| label: tbl-ej-rates-president-agency
 
 load(here::here("data", "ej_rates.Rdata"))
