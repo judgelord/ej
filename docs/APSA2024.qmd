@@ -1,0 +1,127 @@
+---
+title: "extra methods slides"
+format: revealjs
+---
+
+
+# Extra slides 
+
+
+
+## Getting policymakers talking about climate & EJ
+
+```{r, out.width="100%"}
+knitr::include_graphics("Figs/cj-data-agencies100-2.png")
+```
+
+---
+
+```{r, out.width="100%"}
+knitr::include_graphics("Figs/cj-data-agencies-2.png")
+```
+
+---
+
+### Getting policymakers talking about climate & EJ
+
+From 2005 to 2020
+
+- 8% of relevant agency rules addressed climate change, 15% mentioned EJ 
+
+- 20% of all public comments mentioned climate change, 12% mentioned EJ 
+
+- 1000 supporters = ~ 65 percentage point increase in the probability that the agency addresses climate change, 46 percentage point increase that the agency addresses EJ 
+
+- Responsiveness is surprisingly stable across administrations but varies wildly across agencies
+
+
+---
+
+:::: {.columns}  
+
+
+::: {.column width="30%"}
+
+### Agencies that more often address EJ are more responsive to comments demanding attention to EJ
+
+
+Logit (N = 11,315 rules)
+
+:::
+ 
+::: {.column width="70%"}
+
+```{r, fig.cap = "", out.width = "100%", fig.show = "hold", fig.subcap=""}
+
+knitr::include_graphics("Figs/ej-m-PR-shareI-pres-1.png")
+
+```
+
+:::
+
+::::
+
+
+
+
+---
+
+:::: {.columns}  
+
+::: {.column width="70%"}
+```{r,  out.width = "100%"}
+knitr::include_graphics("Figs/ej-m-PR-ejcomments-agencyFE-pres-1.png")
+```
+
+:::
+
+::: {.column width="30%"}
+
+### Agencies respond to larger coalitions demanding attention to EJ
+
+Logit (N = 11,315 rules)
+
+:::
+
+::::
+
+---
+
+:::: {.columns}  
+
+::: {.column width="30%"}
+
+### When agencies adopt EJ language, environmental coalitions do better 
+
+Cross-sectional OLS model of coalition-level lobbying success (N = 284)
+
+:::
+
+::: {.column width="70%"}
+```{r, out.width = "100%"}
+knitr::include_graphics("Figs/mc1ej-obama.png")
+```
+:::
+
+::::
+
+---
+
+:::: {.columns}  
+
+::: {.column width="30%"}
+
+### When agencies adopt EJ language, environmental groups do better
+
+Within-organization (DiD) OLS model (N = 3,932 organizations)
+
+:::
+
+::: {.column width="70%"}
+
+```{r, out.width = "100%"}
+knitr::include_graphics("Figs/mo1ej-obama.png")
+```
+:::
+
+::::
