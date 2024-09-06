@@ -1,7 +1,32 @@
 ---
-title: "extra methods slides"
+title: "Adoption and Cooption of the Environmental Justice Issue Frame"
 format: revealjs
+author:
+  - name: Devin Judge-Lord
+    affiliations:  
+     - name: University of Michigan
 ---
+
+```{r setup}
+source(here::here("code", "setup.R"))
+```
+
+
+## Motivation
+
+```{r}
+#| label: fig-ej-m-PR-pres
+#| fig-cap: "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Address Environmental Justice"
+#| out-width: 50%
+
+knitr::include_graphics(here::here("figs", "ej-m-PR-president-median-pres-1.png") ) 
+
+```
+
+>" Silarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice advanced by each administration...
+
+> Future research should assess the relationship between distinct types of EJ claims and corresponding policy changes."
+
 
 
 # Extra slides 
@@ -11,13 +36,13 @@ format: revealjs
 ## Getting policymakers talking about climate & EJ
 
 ```{r, out.width="100%"}
-knitr::include_graphics("Figs/cj-data-agencies100-2.png")
+knitr::include_graphics(here::here("figs/cj-data-agencies100-2.png"))
 ```
 
 ---
 
 ```{r, out.width="100%"}
-knitr::include_graphics("Figs/cj-data-agencies-2.png")
+knitr::include_graphics(here::here("figs/cj-data-agencies-2.png"))
 ```
 
 ---
@@ -53,7 +78,7 @@ Logit (N = 11,315 rules)
 
 ```{r, fig.cap = "", out.width = "100%", fig.show = "hold", fig.subcap=""}
 
-knitr::include_graphics("Figs/ej-m-PR-shareI-pres-1.png")
+knitr::include_graphics(here::here("figs/ej-m-PR-shareI-pres-1.png"))
 
 ```
 
@@ -70,7 +95,7 @@ knitr::include_graphics("Figs/ej-m-PR-shareI-pres-1.png")
 
 ::: {.column width="70%"}
 ```{r,  out.width = "100%"}
-knitr::include_graphics("Figs/ej-m-PR-ejcomments-agencyFE-pres-1.png")
+knitr::include_graphics(here::here("figs/ej-m-PR-ejcomments-agencyFE-pres-1.png"))
 ```
 
 :::
@@ -99,7 +124,7 @@ Cross-sectional OLS model of coalition-level lobbying success (N = 284)
 
 ::: {.column width="70%"}
 ```{r, out.width = "100%"}
-knitr::include_graphics("Figs/mc1ej-obama.png")
+knitr::include_graphics(here::here("figs/mc1ej-obama.png"))
 ```
 :::
 
@@ -120,8 +145,85 @@ Within-organization (DiD) OLS model (N = 3,932 organizations)
 ::: {.column width="70%"}
 
 ```{r, out.width = "100%"}
-knitr::include_graphics("Figs/mo1ej-obama.png")
+knitr::include_graphics(here::here("figs/mo1ej-obama.png"))
 ```
 :::
 
 ::::
+
+
+## Regression Tables 
+
+```{r models, cache=FALSE}
+load(here::here("models", "ej_models.Rdata"))
+```
+
+```{r, cache=FALSE}
+#| label: tbl-ej-tables
+#| tbl-cap: "Logit Regression Predicting Change in Rule Text" 
+
+rowsFE <- tibble(
+  term = c("Dependent Variable"),
+  `1` = c("EJ Text Added"), 
+    `2` = c("EJ Text Added"), 
+    `3` = c("EJ Text Added"),     
+  `4` = c("EJ Text Added")
+
+
+)
+
+
+modelsFE <- list(
+    "1" = m_PR_pres,
+  "2" = m_PR_presI,
+  "3" = m_PR_presIshare,
+  "4" = m_PR_presIshareI
+)
+#attr(rowsFE, 'position') <- c(0)
+
+
+
+
+modelsummary::modelsummary( modelsFE, 
+                            stars = TRUE, 
+                            coef_map = cm,
+                            gof_omit = "R.*",
+                          add_rows = rowsFE, 
+                          notes = "Data subset to rules where the proposed rule did not mention environmental justice. Reference President = Biden.") 
+```
+
+
+
+
+```{r}
+#| label: "tbl-mo1ej"
+#| 
+load(here::here("models", "mo1ej.Rdata")|> str_replace("University of Michigan Dropbox/Devin Judge-Lord/ej", "dissertation"))
+
+
+rows <- tibble(
+  term = c("Dependent Variable"),
+  `1` = c("Lobbying Success") )
+
+# attr(rowsFE, 'position') <- c(0)
+
+mo1ej = feols(success ~ campaign_ + 
+                ej_framed*business + 
+                   Position 
+                 # fixed effects
+                 | Organization + agency + president,
+               data = comments_coded %>% 
+  filter(comment_type == "Org") %>% 
+  distinct(agency, Organization, Docket, success, Position, coalition_congress, coalition_type,ej_framed,business,
+           coalition_, coalition_size, coalition_comments, president, campaign_) #%>% filter(agency %in% ej_agencies) 
+  )
+
+modelsummary::modelsummary( mo1ej, 
+                            title = "Within-organization (DiD) OLS Model Predicting Hand-Coded Lobbying Success",
+                            stars = TRUE, 
+                            coef_map = cm,
+                            gof_omit = "R.*",
+                          add_rows = rows, 
+                          notes = "")
+```
+

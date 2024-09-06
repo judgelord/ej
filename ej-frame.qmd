@@ -62,15 +62,17 @@ knitr::opts_chunk$set(echo = FALSE, cache = FALSE)
 
 Long marginalized in the US environmental movement, the concept of environmental justice (EJ) has become a near-dominant frame for the environmental policy agenda in the US federal government [@EO14096]. EJ was the dominant frame for environmental policy advanced both by President Biden ("Joe's Plan for a Clean Energy Revolution and Environmental Justice") and now Vice President Harris ("A Climate Plan For the People") as they sought the Democratic Party's nomination.  Even strong critics of government regulation presume that EJ analysis will continue to shape policy in future Republican administrations [@2025, p. 441].
   
-This frame---historically uniting various critics of mainstream utilitarian environmentalism around unequal distributions of environmental harms and amenities---has found a fit with policy agendas as both parties have shifted from basing policy proposals on society-wide benefits and costs toward a greater focus on the distribution of benefits and costs, both for regulation and, increasingly, industrial policy.  @Taylor2002 describes a fusion of the American Indian Movement, Chicano movement, farmworker movement, civil rights movement, and union organizing: 
+This frame---historically uniting various critics of mainstream utilitarian environmentalism around fighting unequal distributions of environmental harms and amenities---has found a fit with policy agendas as both parties have shifted from basing policy proposals on society-wide benefits and costs toward a greater focus on the distribution of benefits and costs---both for regulation and, increasingly, industrial policy.  
+
+Like other movements, the EJ movement illustrates how groups attempt to use a particular way of framing policy issues (in this case, a particular phrase) as a vehicle to build coalitions and advance policy agendas. @Taylor2002 describes a fusion of the American Indian Movement, Chicano movement, farmworker movement, civil rights movement, and union organizing: 
 
 > People of color [raised] social justice concerns such as self-determination, sovereignty, human rights, social inequality, loss of land base, limited access to natural resources, and disproportionate impacts of environmental hazards and linked them with traditional working-class environmental concerns such as worker rights and worker health and safety to develop an environmental justice agenda. (p. 1)
 
-Like other movements, the EJ movement illustrates how groups attempt to use a particular way of framing policy issues (in this case, a particular phrase) as a vehicle to build coalitions and advance policy agendas. The original members of this coalition---activists fighting racialized geographies of environmental harms, settler colonialism, and hazardous working conditions---continue to organize under the environmental justice banner. But as it has gained political legitimacy, other groups increasingly frame their struggles as matters of environmental justice. 
+The original members of this coalition---activists fighting racialized geographies of environmental harms, settler colonialism, and hazardous working conditions---continue to organize under the environmental justice banner. But as it has gained political legitimacy, other groups increasingly frame their struggles as matters of environmental justice as well. 
 
 As concepts of justice rooted in grass-roots advocacy and academia collide with the opportunity structure of federal policymaking and implementation, environmental justice has gained new meanings. These changes include academics and activists linking issues such as GMO labeling [@Gonzalez2011], police violence [@Pellow2016], cosmetics [@DiCosmo2024], the location of parks [@Boone2009], the location of dollar stores [@Kavi2019], homelessness [@Gamble2023], COVID-19 [@Dean2022], science policy [@Desikan2023], light pollution [@Xiao2023] garbage collection [@Bell2013], plastic pollution [@Kefela2024], knowledge of earthquake risk [@Reddy2023], and anything related to climate change [@Resnik2022], including renewable energy development [Whyte2023] <!--Green House Gasses [CITE]--> to the environmental justice movement. These changes also include opponents of environmental regulation adopting definitions rejected by most activists and absent from academic writing. Both efforts to expand and coop the environmental issue frame are evidence of its power and legitimacy in environmental policymaking.
 
-Issue definition matters because the mobilization or suppression of conflicts allocates power---" antagonists can rarely agree on what the issues are because power is involved in the definition" [@Schattschneider1975]. Changes in issue definition frequently precede major policy changes [@Baumgartner1993]. 
+Issue definition matters because the mobilization or suppression of conflicts allocates power---"antagonists can rarely agree on what the issues are because power is involved in the definition" [@Schattschneider1975]. Changes in issue definition frequently precede major policy changes [@Baumgartner1993]. 
 
 While the adoption of environmental justice discourse is evidence of the movement's impact on policymaking discourse, the new and contested meanings of the phase make it difficult to assess the movement's impact on substantive policy outcomes because meaning may not be shared between policymakers and activists, or even among activists [@Lester2001]. 
 
@@ -96,7 +98,7 @@ To systematically assess how often the environmental justice frame is used in fe
 
  @fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. 
 
-```{r fig-ej-data, fig.cap = "Final Rules by Whether they Address Environmental Justice"}
+```{r fig-ej-data, fig.cap = "Proposed and Final Rules by Whether they Address Environmental Justice"}
 knitr::include_graphics(here::here("figs", "ej-data-6.png") ) ## 
 ```
 
@@ -111,13 +113,13 @@ Controlling for the scale of public pressure (*Log(Unique EJ Comments)*) and age
 @tbl-ej-tables show estimates from a series of logit regression models predicting whether the agency will add text addressing EJ to a final rule when the draft rule did not mention EJ at all. Using estimates from Model 1 to predict responsiveness to commenters requesting that EJ be addressed at two agencies across administrations, @fig-ej-m-PR-pres shows surprisingly similar rates of responsiveness to comments raising (i.e., the difference between adding EJ text to final rules when comments raised it and minus baseline rates of adding EJ text.)
 
 
-```{r ej-m-PR, cache=FALSE}
+```{r models, cache=FALSE}
 load(here::here("models", "ej_models.Rdata"))
 #equatiomatic::extract_eq(m_PR)
 #equatiomatic::extract_eq(m_PR_agencyFE)
 ```
 
-```{r , cache=FALSE}
+```{r, cache=FALSE}
 #| label: tbl-ej-tables
 #| tbl-cap: "Logit Regression Predicting Change in Rule Text" 
 
@@ -166,10 +168,10 @@ Consistency in mentions of environmental justice across administrations could ha
 1. Discussion of environmental justice in final rules could be cheap talk, pro forma compliance with EO 12898, unrelated to substantive policy agendas
 1. Presidential administrations could have different definitions of environmental justice that reframe it in a way that is consistent with their policy agenda. This would allow the term to be used with similar frequency despite different meanings. 
 1. The phrase environmental justice may be used in ways that are less correlated with partisanship than its historic roots in environmental racism discourse. 
-1. Presidents do not perfectly control bureaucratic agents. The persistence of engagement (or non-engagement) with 
+1. Presidents do not perfectly control bureaucratic agents. The persistence of engagement (or non-engagement) with comments raising EJ concerns could have more to do with propensities of the agency rather than priorities of the administration. 
 
 These explanations are not mutually exclusive, and each may explain a portion of the lack of variation. For example, 
-the Heritage Foundation's Project 2025: Mandate for Leadership report does not propose simply eliminating the EPA's Office of Environmental Justice and External Civil Rights, as it does with many agencies and offices. Instead, it suggests that the staff be reallocated to the Office of the Administrator and to be run by a political appointee [@2025, p. 421] and Office of the General Council and that EJ work should continue but be "based on
+the Heritage Foundation's Project 2025: Mandate for Leadership report does not propose simply eliminating the EPA's Office of Environmental Justice and External Civil Rights, as it does with many agencies and offices. Instead, it suggests that the staff be reallocated to the Office of the Administrator and to be run by a political appointee and Office of the General Council [@2025, p. 421] and that EJ work should continue but be "based on
 neutral constitutional principles" [@2025, p. 441] 
 
 > [T]here is an opportunity to redefine EJ as a tool for the agency to prioritize environmental protection efforts and assistance to communities in proximity to pollution or with the greatest
@@ -198,9 +200,24 @@ My approach to measuring lobbying success starts with policy demands raised in c
 
 Other approaches to identifying the commenter's relationship with policy changes have different strengths and weaknesses. For example, one could measure success by the number of times a comment is mentioned in the agency's response to comments. However, this measure may be affected by strategic responsiveness by agencies choosing to discuss some issues more than others. It also counts explicit rejections toward the measure of responsiveness (as I show in @sec-dim, explicit rejections are common). One could also measure success by focusing on a priori potential aspects of the policy. @Balla2020 count five factors: (1) the number of regulated entities, (2) the number of activities or substances being regulated, (3) the level of pollution standards, (4) the compliance and effective deadlines of the regulation, and (5) the monitoring and reporting requirements. Each takes one value (increasing or decreasing), and each is weighted equally in their analysis. In contrast, by starting with comments, my method relies on commenters to define the dimensions of conflict and highlight the issues they care most about. In this sense, because I am interested in how explicit issue framing affects lobbying success, my approach focuses on  "the first face of power"---issues that are already on the agenda of the broader policy system [@Bachrach1963].   <!--TODO CLARIFY-->
 
+### Dimensions of environmental justice
+
+While my coding of dimensions of environmental justice is largely inductive, I started with some expectations of dimensions of environmental justice based on prior work. 
+
+Most prominent is the distinction between distributive and procedural justice. 
+Procedural justice is discussed both in terms of ex-ante inclusion in policy processes and ex-post matters of equity in implementation and enforcement [@Boone2008].
+For example, @Konisky2017 find that regulatory enforcement is correlated with political mobilization around EJ issues.
+
+Another dimension of variation is racialization. Modern environmental justice advocacy has roots in the older organizing frame of environmental racism. While the movement has broadened, racial inequality still features prominently in activism and scholarship. Policies' exclusion of race is a frequent target of activist pressure. 
+@Abel2015 find that poorer and less White states have more developed EJ policies.
+
+Additionally, distributive justice claims operate at different geographic scales.
+A major difference between national advocacy groups and more traditional EJ groups was the scale of impacts they addressed. Traditional groups commented on global or national averages of harms and benefits that were presumed to benefit marginalized communities most harmed by pollution. 
+In contrast, local groups tended to focus on more targeted policies (e.g., state implementation plans or air quality attainment zones). Even when commenting on national policies, they cited specific impacts in their area. This is especially true for tribes and other Native groups. 
 
 
-### Summary statistics
+
+## Summary statistics
 
 
 @tbl-ej-winrates shows relative rates of lobbying success for different types of organizations. "Overall Success Rate" shows the share of cases that changed between draft and final as each type of commenter requested. "EJ Success Rate" shows the share of cases that changed as the commenter requested when the comment's demands were coded as related to environmental justice. Some organization types --- including frontline EJ community groups, universities, religious groups, professional associations, environmental groups, and pressure groups --- are subsets of the broad "NGO" category. Trade associations, while technically nonprofit, are not included in the NGO category.  
@@ -237,21 +254,6 @@ This should not be taken as evidence that tribes and frontline groups are never 
 
 
 
-## Priors 
-
-While my coding of dimensions of environmental justice is largely inductive, I started with some expectations of dimensions of environmental justice based on prior work. 
-
-Most prominent is the distinction between distributive and procedural justice. 
-Procedural justice is discussed both in terms of ex-ante inclusion in policy processes and ex-post matters of equity in implementation and enforcement [@Boone2008].
-For example, @Konisky2017 find that regulatory enforcement is correlated with political mobilization around EJ issues.
-
-Another dimension of variation is racialization. Modern environmental justice advocacy has roots in the older organizing frame of environmental racism. While the movement has broadened, racial inequality still features prominently in activism and scholarship. Policies' exclusion of race is a frequent target of activist pressure. 
-@Abel2015 find that poorer and less White states have more developed EJ policies.
-
-Additionally, distributive justice claims operate at different geographic scales.
-A major difference between national advocacy groups and more traditional EJ groups was the scale of impacts they addressed. Traditional groups commented on global or national averages of harms and benefits that were presumed to benefit marginalized communities most harmed by pollution. 
-In contrast, local groups tended to focus on more targeted policies (e.g., state implementation plans or air quality attainment zones). Even when commenting on national policies, they cited specific impacts in their area. This is especially true for tribes and other Native groups. 
-
 
 <!--## Regression model --> 
 
@@ -262,7 +264,7 @@ In contrast, local groups tended to focus on more targeted policies (e.g., state
 ## Policymakers Engaging with Environmental Justice is correlated with Substantive Policy Success {#sec-cor}
 
 
-@tbl-mo1ej and @fig-mo1ej show the results of a difference-in-difference regression predicting hand-coded lobbying success *within* organizations that lobbied on more than one rule. *Pressure campaign* indicates whether the organization mobilized a public pressure campaign. The coefficient is negative in this model because pressure campaigns are associated with highly salient rules where agencies are, on average, less likely to make changes [@ej]. *Supports Rule* indicates whether the commenter supports the direction the agency is going. In this case, the organization's policy demands are pushing the agency to go further or posing "friendly" amendments. This is highly associated with lobbying success (p < .001). *Agency Adopted EJ* Frame indicates whether the agency changed how it addressed EJ after receiving comments raising EJ concerns. This coefficient alone simply suggests that organizations are, on average, more successful when the agency makes changes (p < .001)---it is not specific to the organization's demands. *Business* is whether the commenter is a business. *Business x Agency Adopted EJ Frame* is the coefficient on the interaction term. Businesses may fare slightly worse when agencies change how they address environmental justice compared to non-businesses (p < .1). 
+@tbl-mo1ej and @fig-mo1ej show the results of a difference-in-difference regression predicting hand-coded lobbying success *within* organizations that lobbied on more than one rule. *Pressure campaign* indicates whether the organization mobilized a public pressure campaign. The coefficient is negative in this model because pressure campaigns are associated with highly salient rules where agencies are, on average, less likely to make changes [@ej]. *Supports Rule* indicates whether the commenter supports the direction the agency is going. Supportive organizations' policy demands are often pushing the agency to go further or posing "friendly" amendments. This is highly associated with lobbying success (p < .001). *Agency Adopted EJ Frame* indicates whether the agency changed how it addressed EJ after receiving comments raising EJ concerns. This coefficient alone simply suggests that organizations are, on average, more successful when the agency makes changes (p < .001)---it is not specific to the organization's demands. *Business* is whether the commenter is a business or represents business interests (e.g., a trade association). *Business x Agency Adopted EJ Frame* is the coefficient on the interaction term. Compared to non-businesses interests, business groups may fare slightly worse when agencies change how they address environmental justice  (p < .1). 
 
 
 ```{r}
