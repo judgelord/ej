@@ -1,6 +1,8 @@
 ---
 title: "Adoption and Cooption of the Environmental Justice Issue Frame"
-format: revealjs
+format:
+  revealjs:
+    incremental: true   
 author:
   - name: Devin Judge-Lord
     affiliations:  
@@ -15,7 +17,7 @@ title-slide-attributes:
 #source("code/setup.R")
 ```
 
-## {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".2"}
+## {background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".2"}
 
 > He who determines what politics is about runs the country because the definition of conflicts allocates power. 
 - E.E. Schattschneider
@@ -61,7 +63,7 @@ knitr::include_graphics("figs/ej-m-PR-president-median-pres-1.png")
 ```
 
 
-## Motivation
+## Part 2: Motivation
 
 > "Similarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice advanced by each administration...
 
@@ -146,9 +148,9 @@ dplyr::arrange(`Organization Type`) |>
 - But, some targeted policy (catch limit exemptions, tribal consultation)
 
 
-## Thank you! {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".5"}
+# Thank you! {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".5"}
 
-Comments: [judgelor@umich.edu]()
+Comments 🙏: [judgelor@umich.edu]()
 
 
 Slides: [judgelord.github.io/ej/APSA2024](https://judgelord.github.io/ej/APSA2024.html)
