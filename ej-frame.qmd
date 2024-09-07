@@ -25,8 +25,7 @@ author:
      - name: University of Michigan
        #department: Ford School of Public Policy
     email: "judgelor@umich.edu"
-thanks: |
-    "I will be grateful for any feedback on this draft: judgelor@umich.edu. The most recent draft is here: [judgelord.github.io/ej/ej-frame.pdf](https://judgelord.github.io/ej/ej-frame.pdf). [judgelor@umich.edu](mailto:judgelor@umich.edu), research assistance from Hope Karnopp and Sophia Gustafson, and funding from the National Science Foundation and American Political Science Association."
+thanks: "I will be grateful for any feedback on this draft: judgelor@umich.edu. The most recent draft is here: [judgelord.github.io/ej/ej-frame.pdf](https://judgelord.github.io/ej/ej-frame.pdf). [judgelor@umich.edu](mailto:judgelor@umich.edu), research assistance from Hope Karnopp and Sophia Gustafson, and funding from the National Science Foundation and American Political Science Association."
 bibliography: "assets/dissertation.bib"
 execute:
   echo: false
@@ -328,7 +327,7 @@ Many environmental justice claims have to do with the unequal spatial distributi
 
 #### Unequal spatial distribution of impacts
 
-One of the major evolutions from its origins in environmental racism is a great expansion of the groups claiming to be disproportionately affected. It no longer needs to assert marginalization or historic oppression. Commenters assert injustices when one county is impacted more than another if urban areas are impacted more than rural areas, or vice versa. 
+One of the major evolutions from its origins in environmental racism is a great expansion of the groups claiming to be disproportionately affected. Many groups may not even assert marginalization or historic oppression, simply disporate impacts as being unjust. For example, commenters assert injustices when one county is impacted more than another or if urban areas are impacted more than rural areas, or vice versa. 
 
 For example, a rural county in Oregon claimed that logging restrictions due to endangered species conservation increased the risk of wildfires, which disproportionately impact rural communities: 
 
@@ -451,7 +450,7 @@ As one commenter noted on the Trump Administration's NEPA reforms:
 disclosure documents are devoted to boilerplate language regarding historic preservation;
 environmental justice,... and other issues. [(Oregon Wild, 2020)](https://www.regulations.gov/comment/CEQ-2019-0003-161185)
 
-Boilerplate language asserting "no adverse effects on low-income or minority populations" was common in regulatory texts. However the frame is understood by the bureaucrats using this language, it is clear that they do not understand environmental justice analysis as part of their job. 
+Boilerplate language asserting "no adverse effects on low-income or minority populations" was common in regulatory texts. However the frame is understood by the bureaucrats using this language, it is clear that many do not understand environmental justice analysis as part of their job. 
 
 
 #### Minimizing policy impacts relative to trends

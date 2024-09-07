@@ -12,43 +12,51 @@ title-slide-attributes:
 ---
 
 ```{r setup}
-#source(here::here("code", "setup.R"))
+#source("code/setup.R")
 ```
+
+## {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".2"}
+
+> He who determines what politics is about runs the country because the definition of conflicts allocates power. 
+- E.E. Schattschneider
 
 ## Preview 
 
-1. Large-analysis of *all* 15,000 draft and final rules from 52 agencies 2005-2024 <br>             & 40,000,000+ public comments $\uparrow$ 
+**Part 1.** Large-scale analysis: *all* 15,000 draft and final rules from 52 agencies 2005-2024 & 40,000,000+ public comments on these draft rules
 
+- agencies add EJ language when pressured
 - puzzlingly little variation over time in baseline **rates** of addressing EJ *and* **responsiveness** to requests to do so
 
-. . . 
+## Preview 
 
-2. Medium-scale sample of all comments on 200 rules 
+**Part 2.** Medium-scale hand-coded sample of all comments on 200 rules 
 
 - adding EJ language may correlate with substantive policy change favoring public interest groups
 - mostly Big Greens using generic EJ language
-- different meanings across administrations 
+- radically different meanings across commenters and administrations 
 
 
 
 
+---
 
-
-##  Little variation in baseline **rates** of addressing EJ
+###  Little variation in **rates** of addressing EJ
 
 
 ```{r fig-ej-data, fig.cap = "Proposed and Final Rules by Whether they Address Environmental Justice"}
-knitr::include_graphics(here::here("figs", "ej-data-6.png") ) 
+knitr::include_graphics("figs/ej-data-6.png") 
 ```
 
-##  Little variation in **responsiveness** to comments raising EJ
+---
+
+###  Little variation in **responsiveness** to comments
 
 ```{r}
 #| label: fig-ej-m-PR-pres
-#| fig-cap: "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Address Environmental Justice"
-#| out-width: 50%
+#| fig-cap: "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Not Address Environmental Justice"
+#| out-width: 100%
 
-knitr::include_graphics(here::here("figs", "ej-m-PR-president-median-pres-1.png") ) 
+knitr::include_graphics("figs/ej-m-PR-president-median-pres-1.png") 
 
 ```
 
@@ -64,32 +72,88 @@ knitr::include_graphics(here::here("figs", "ej-m-PR-president-median-pres-1.png"
 
 ---
 
+### When agencies adopt EJ language, environmental groups do better
 
 :::: {.columns}  
 
-::: {.column width="30%"}
+::: {.column width="20%"}
 
-### When agencies adopt EJ language, environmental groups do better
 
-Within-organization (DiD) OLS model (N = 3,932 organizations)
+Within-organization (DiD) OLS model 
+
+(N = 3,932 organizations)
 
 :::
 
-::: {.column width="70%"}
+::: {.column width="80%"}
 
 ```{r, out.width = "100%"}
-knitr::include_graphics(here::here("figs/mo1ej-obama.png"))
+knitr::include_graphics("figs/mo1ej-obama.png")
 ```
 :::
 
 ::::
 
-## How should we interpret 
+---
 
-- Some meaningful policy changes under all presidents, except Trump
+## Which environmental groups? 
 
-- 
+```{r substantive, out.width = "85%", fig.show = "hold"}
 
+knitr::include_graphics("figs/ej-success-table.png")
+
+```
+
+```{r eval=FALSE, include=FALSE}
+#| label: "tbl-ej-winrates"
+#| tbl-cap: "Hand-coded Lobbying Success by Type of Organization, 2005-2020"
+
+load(here::here("data", "winrate.Rdata"))
+
+winrates |> 
+  dplyr::mutate(`EJ Success Rate` = `EJ Success Rate` |>
+           scales::percent(accuracy = 1) |>
+             tidyr::replace_na("-"),
+         `Overall Success Rate` = `Overall Success Rate` |>
+           scales::percent(accuracy = 1)) |> 
+  dplyr::select(-`N raising EJ`) |>
+  # name to nest
+  dplyr::mutate(`Organization Type` = `Organization Type` |> 
+           stringr::str_replace("(State|Tribe|City)", "Government, \\1") |> 
+           stringr::str_replace("(Religious|Pressure Group|Professional Assn.|University|Environmental Group|Credit Union|Union|Frontline EJ)", "NGO, \\1") |> 
+           stringr::str_replace("(Finance|Law Firm)", "Business, \\1") |> 
+           stringr::str_replace("(NGO$|Business$)", "\\1 (Overall)")) |> 
+dplyr::arrange(`Organization Type`) |> 
+  knitr::kable()
+```
+
+
+## How to interpret advocacy group adoption/cooption of EJ rhetoric
+
+- expanding and contested frame: 
+
+  - any inequality across space or identity group
+
+
+## How should we interpret agency adoption of EJ rhetoric
+
+- Mostly rebutting or dismissing complaints (most officials do not understand EJ analysis as part of their job)
+
+But 
+
+- Some meaningful policy changes under all presidents
+
+BUT
+
+- mostly justifying non-targeted policy advanced by historically white national advocacy groups
+
+
+## Thank you! {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".5"}
+
+Comments: [judgelor@umich.edu]()
+
+
+Slides: [judgelord.github.io/ej/APSA2024](https://judgelord.github.io/ej/APSA2024.html)
 
 # Extra slides 
 
@@ -98,13 +162,13 @@ knitr::include_graphics(here::here("figs/mo1ej-obama.png"))
 ## Getting policymakers talking about climate & EJ
 
 ```{r, out.width="100%"}
-knitr::include_graphics(here::here("figs/cj-data-agencies100-2.png"))
+knitr::include_graphics("figs/cj-data-agencies100-2.png")
 ```
 
 ---
 
 ```{r, out.width="100%"}
-knitr::include_graphics(here::here("figs/cj-data-agencies-2.png"))
+knitr::include_graphics("figs/cj-data-agencies-2.png")
 ```
 
 ---
@@ -140,7 +204,7 @@ Logit (N = 11,315 rules)
 
 ```{r, fig.cap = "", out.width = "100%", fig.show = "hold", fig.subcap=""}
 
-knitr::include_graphics(here::here("figs/ej-m-PR-shareI-pres-1.png"))
+knitr::include_graphics("figs/ej-m-PR-shareI-pres-1.png")
 
 ```
 
@@ -157,7 +221,7 @@ knitr::include_graphics(here::here("figs/ej-m-PR-shareI-pres-1.png"))
 
 ::: {.column width="70%"}
 ```{r,  out.width = "100%"}
-knitr::include_graphics(here::here("figs/ej-m-PR-ejcomments-agencyFE-pres-1.png"))
+knitr::include_graphics("figs/ej-m-PR-ejcomments-agencyFE-pres-1.png")
 ```
 
 :::
@@ -186,10 +250,8 @@ Cross-sectional OLS model of coalition-level lobbying success (N = 284)
 
 ::: {.column width="70%"}
 ```{r, out.width = "100%"}
-knitr::include_graphics(here::here("figs/mc1ej-obama.png"))
+knitr::include_graphics("figs/mc1ej-obama.png")
 ```
 :::
 
 ::::
-
----
