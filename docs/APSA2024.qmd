@@ -139,13 +139,11 @@ dplyr::arrange(`Organization Type`) |>
 
 - Mostly rebutting or dismissing complaints (most officials do not understand EJ analysis as part of their job)
 
-But 
+- But, some meaningful policy changes under all presidents
 
-- Some meaningful policy changes under all presidents
+- But, mostly non-targeted policy advanced by historically white national advocacy groups (e.g. pollution limits, public lands)
 
-BUT
-
-- mostly justifying non-targeted policy advanced by historically white national advocacy groups
+- But, some targeted policy (catch limit exemptions, tribal consultation)
 
 
 ## Thank you! {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".5"}
@@ -156,6 +154,17 @@ Comments: [judgelor@umich.edu]()
 Slides: [judgelord.github.io/ej/APSA2024](https://judgelord.github.io/ej/APSA2024.html)
 
 # Extra slides 
+
+Examples: 
+
+Bush 
+
+- Mercury Rules
+
+Obama
+
+- EPA comments to NMFS about effects on low income fishing communities 
+- oil and gas drilling 
 
 
 
