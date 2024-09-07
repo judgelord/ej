@@ -22,20 +22,20 @@ title-slide-attributes:
 > He who determines what politics is about runs the country because the definition of conflicts allocates power. 
 - E.E. Schattschneider
 
-## Preview 
+## Preview: **Part 1**
 
-**Part 1.** Large-scale analysis: *all* 15,000 draft and final rules from 52 agencies 2005-2024 & 40,000,000+ public comments on these draft rules
+ Large-scale analysis: *all* 15,000 draft and final rules from 52 agencies 2005-2024 & 50,000,000+ public comments on these draft rules
 
 - agencies add EJ language when pressured
 - puzzlingly little variation over time in baseline **rates** of addressing EJ *and* **responsiveness** to requests to do so
 
-## Preview 
+## Preview: **Part 2** 
 
-**Part 2.** Medium-scale hand-coded sample of all comments on 200 rules 
+Medium-scale hand-coded sample of all 11,000 comments from organizations on 200 rules 
 
-- adding EJ language may correlate with substantive policy change favoring public interest groups
+- adding EJ language may correlate with substantive policy change favoring public interest groups ("lobbying success")
 - mostly Big Greens using generic EJ language
-- radically different meanings across commenters and administrations 
+- radically different meanings of EJ across commenters and administrations 
 
 
 
@@ -70,7 +70,7 @@ knitr::include_graphics("figs/ej-m-PR-president-median-pres-1.png")
 > Future research should assess the relationship between distinct types of EJ claims and corresponding policy changes."
 
 
-## Prilminary Findings from Hand-Coded Comments
+## Preliminary Findings from Hand-Coded Comments
 
 ---
 
@@ -143,7 +143,7 @@ dplyr::arrange(`Organization Type`) |>
 
 - But, some meaningful policy changes under all presidents
 
-- But, mostly non-targeted policy advanced by historically white national advocacy groups (e.g. pollution limits, public lands)
+- But, mostly non-targeted policy advanced by historically white national advocacy groups (e.g., pollution limits, safety, public lands, marine sanctuaries)
 
 - But, some targeted policy (catch limit exemptions, tribal consultation)
 
@@ -165,7 +165,7 @@ Bush
 
 Obama
 
-- EPA comments to NMFS about effects on low income fishing communities 
+- EPA comments to NMFS about effects on low-income fishing communities 
 - oil and gas drilling 
 
 
