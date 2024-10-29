@@ -17,7 +17,7 @@ title-slide-attributes:
 ---
 
 ```{r setup}
-#source("code/setup.R")
+#source("code/setup.R") 
 ```
 
 ## {background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".2"}
@@ -28,7 +28,7 @@ title-slide-attributes:
 > "Environmental justice means something different in every context" - Monique Harden
 
 
-Agencies make ## 90% of U.S. law
+## Agencies make 90% of U.S. law
 
 - Power plants emissions & emissions (EPA)
 - Environmental review & impact statements (CEQ)
