@@ -1,0 +1,107 @@
+/*-- scss:defaults --*/
+// importing fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
+
+// fonts
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
+
+// headings
+$presentation-heading-font: 'Open Sans', sans-serif  !default;
+$presentation-heading-color: #001B35 !default;
+$h1-font-size: 1.6em !default;
+$h2-font-size: 1.3em !default;
+$h3-font-size: 1.15em !default;
+
+//code
+$code-color: #001B35 !default;
+$font-family-monospace: 'Open Sans', monospace  !default;
+
+// general
+$body-bg: #FFFFFF;
+$body-color: #001B35;
+$link-color: #42affa;
+$link_color: #006EB2;
+$text-muted: #4c6782;
+$code_highlight_color: #FFCB05;
+$background_color: #FFFFFF;
+$text_font_size: 1rem;
+$code_font_size: 1rem;
+$header_h1_font_size: 1.75rem;
+$header_h2_font_size: 1.5rem;
+$header_h3_font_size: 1.25rem;
+$code_inline_background_color: #42affa;
+$code-bg: #42affa;
+$table_row_even_background_color:#E6F0FA;
+$presentation-font-size-root: 35px !default;
+$base_font_size: 35px !default;
+
+/*-- scss:rules --*/
+.reveal pre code {
+  background-color: #42affa;
+  font-size: 1em;
+  padding: 0.1em;
+  line-height: 1.1em;
+}
+
+
+.subtitleqwerty {
+  color: $body-color;
+  font-size: $h2-font-size;
+  font-family: $presentation-heading-font;
+}
+
+.author {
+  color: $body-bg;
+  font-size: $h2-font-size;
+  font-family: $presentation-heading-font;
+}
+
+.footer {
+  font-family: $presentation-heading-font;
+}
+
+.reveal .slide-number {
+  font-family: $presentation-heading-font;
+}
+
+.reveal .panel-tabset [role=tab] {
+    font-size: 0.8em;
+}
+
+.reveal .footer {
+    color: #4c6782;
+}
+
+
+.center-x{
+    text-align: center;
+}
+
+
+
+
+
+mark {
+  background-color: #FFCB05;
+  color: #001B35;
+}
+
+p {
+    margin-top:-5px;
+}
+
+
+$font-family-monospace: 'Open Sans', monospace  !default;
+
+
+/*-- scss:rules --*/
+
+.reveal blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.1em;
+  font-style: italic;
+  color: #4c6782;
+}
+
+

@@ -269,7 +269,7 @@ This should not be taken as evidence that tribes and frontline groups are never 
 ```{r}
 #| label: "tbl-mo1ej"
 #| 
-load(here::here("models", "mo1ej.Rdata")|> str_replace("University of Michigan Dropbox/Devin Judge-Lord/ej", "dissertation"))
+here::here("models", "mo1ej.Rdata")|> str_replace("Dropbox/ej", "dissertation") |> load()
 
 
 rows <- tibble(
@@ -392,10 +392,13 @@ While typically focused on multiple geographically proximate impacts, cumulative
 <!--
 #### Cumulative similar impacts 
 
-> The Elimination of the Cumulative Impacts Analysis Raises Environmental Justice Concerns...Executive Order 12898 requires that each agency ensure that its actions foster environmental justice concerns.  CEQ-2019-0003-160397 
+National Environmental Policy Act 
 
-EPA-HQ-OAR-2003-0048 National Emission Standards for Hazardous Air Pollutants: Plywood and Composite Wood Products
-> The rule also does not involve special consideration of environmental justice-related issues as required by EO 12898.”
+> The Elimination of the Cumulative Impacts Analysis Raises Environmental Justice Concerns...Executive Order 12898 requires that each agency ensure that its actions foster environmental justice concerns. (CEQ-2019-0003-160397)
+
+National Emission Standards for Hazardous Air Pollutants: Plywood and Composite Wood Products (EPA-HQ-OAR-2003-0048)
+
+> "The rule also does not involve special consideration of environmental justice-related issues as required by EO 12898.”
 
 
 #### Cumulative disparate impacts 
@@ -455,7 +458,7 @@ Boilerplate language asserting "no adverse effects on low-income or minority pop
 
 #### Minimizing policy impacts relative to trends
 
-When the Trump Environmental Protection Agency repealed the Obama-era Clean Power Plan, the EPA asserted that any climate-related benefits of the policy were insignificant because the trend was toward decreasing pollution intensity. Because the trend was in the right direction, the future was to be better than the past, and thus, comparative analysis of alternative futures with and without the policy is not needed. 
+When the Trump Environmental Protection Agency repealed the Obama-era Clean Power Plan, the EPA asserted that any climate-related benefits of the policy were insignificant because the trend was toward decreasing pollution intensity. Because the trend was in the right direction, the future is to be better than the past, and thus, comparative analysis of alternative futures with and without the policy is not needed. 
 
 > EPA believes that the power sector is already on the path to achieving the CO2 reductions required by the CPP. Therefore, the EPA does not believe it would have any significant impact on EJ-affected communities. [(EPA-HQ-OAR-2017-0355, 2019)](https://www.federalregister.gov/documents/2019/07/08/2019-13507/repeal-of-the-clean-power-plan-emission-guidelines-for-greenhouse-gas-emissions-from-existing)
 
