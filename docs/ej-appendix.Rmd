@@ -78,6 +78,16 @@ Replication data are available in SQL and Rdata at https://github.com/judgelord/
 load(here::here("data", "ej_data_clean.Rdata"))
 
 rules %<>% ungroup() %>% 
+  mutate(president = case_when(
+        year > 1992 & year <2001 ~ "Clinton",
+    year > 2000 & year <2009 ~ "G.W. Bush",
+        year > 2008 & year < 2017 ~ "Obama",
+    year > 2016 & year < 2021 ~ "Trump",
+            year > 2020 & year < 2025 ~ "Biden"
+  ))
+
+
+rules %<>% ungroup() %>% 
   mutate(president2 = case_when(
         year > 1992 & year <1995 ~ "Clinton 1",
     year > 1994 & year <2001 ~ "Clinton 2",
@@ -103,6 +113,8 @@ rules$president %<>% factor(levels =   c("Clinton",
                                            "Trump",
                                            "Biden") )
 
+
+rules %>% filter(is.na(president)) %>% pull(year)
 ```
 
 Subsets of data:
@@ -998,7 +1010,7 @@ winrate <- ejFR_PR %>%
   count(ej_comment, ej_fr) %>% 
   group_by(ej_comment) %>% #FIXME make nice table with percents
   spread(ej_fr, n) %>% 
-  mutate(percent = round(`TRUE`/(`TRUE`+`FALSE`)*100 ))
+  mutate(percent = round(`TRUE`/(`TRUE`+`FALSE`)*100 )) 
 
 winrate %>% kablebox()
 
@@ -1039,7 +1051,7 @@ winrate <- ejFR_PR %>%
   spread(ej_fr, n) %>% 
     mutate(`FALSE` = replace_na(`FALSE`, 0)) %>%
   mutate(`TRUE` = replace_na(`TRUE`, 0)) %>%
-  mutate(percent = round(`TRUE`/(`TRUE`+`FALSE`)*100 ))
+  mutate(percent = round(`TRUE`/(`TRUE`+`FALSE`)*100 )) 
 
 winrate %>% kablebox()
 
@@ -1050,6 +1062,7 @@ ejFR_PR %>%
   mutate(EJ_comment = ifelse(ej_comment, "EJ Comments", "No EJ Comments"),
          EJ_fr = ej_fr# ifelse(ej_fr, "EJ Addressed", "EJ Not Addressed") 
          ) %>% 
+  drop_na(president)%>% 
   ggplot() + 
   aes(x = n, y = EJ_comment, 
       fill = EJ_fr, 
@@ -1295,6 +1308,31 @@ predicted %<>%
 
 # As a plot
 p <- predicted %>% 
+  ggplot() + 
+  aes(x = president, y = .fitted, shape = EJ_comment, color = EJ_comment) + 
+  geom_pointrange(aes(ymin = .fitted - 1.96*.se.fit,
+                  ymax = .fitted + 1.96*.se.fit), alpha = .7, position = position_dodge(width = 0.40) )  + 
+  geom_hline(yintercept = 0, linetype = 2) +
+  coord_flip() +
+  facet_wrap("agency", ncol = 1) +
+  labs(y = 'Responsiveness', 
+       x = "",
+       color = "",#color = '"Environmental Justice"\nRaised by Comments',
+       shape = "",#shape = '"Environmental Justice"\nRaised by Comments', 
+       title = "") + 
+  theme_minimal() + 
+  theme(#axis.text.y = element_blank(),
+        #axis.ticks.y = element_blank(),
+    # text = element_text(family = "Open Sans"),
+    legend.position = "none", 
+        panel.grid.major.y = element_blank())+
+    scale_color_viridis_d(begin = 0, end = .6, option = "plasma")  + ylim(0,1) 
+
+p
+
+# As a plot
+p <- predicted %>% 
+  filter(agency == "Environmental Protection Agency") %>% 
   ggplot() + 
   aes(x = president, y = .fitted, shape = EJ_comment, color = EJ_comment) + 
   geom_pointrange(aes(ymin = .fitted - 1.96*.se.fit,

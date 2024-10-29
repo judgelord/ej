@@ -33,8 +33,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 ej.Rproj
-notes
-data
-figs
-models
 .DS_Store

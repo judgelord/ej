@@ -60,7 +60,7 @@ knitr::include_graphics("figs/ej-data-6.png")
 #| fig-cap: "Responsiveness to Pressure Address Environmental Justice where the Proposed Rule Did Not Address Environmental Justice"
 #| out-width: 100%
 
-knitr::include_graphics("figs/ej-m-PR-president-median-pres-1.png") 
+knitr::include_graphics("figs/ej-m-PR-president-median-pres-2.png") 
 
 ```
 
@@ -110,7 +110,7 @@ knitr::include_graphics("figs/ej-success-table.png")
 
 ```{r eval=FALSE, include=FALSE}
 #| label: "tbl-ej-winrates"
-#| tbl-cap: "Hand-coded Lobbying Success by Type of Organization, 2005-2020"
+#| tbl-cap: "Hand-coded Lobbying Success by Type of Organization, 2005-2024"
 
 load(here::here("data", "winrate.Rdata"))
 

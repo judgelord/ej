@@ -327,7 +327,7 @@ Many environmental justice claims have to do with the unequal spatial distributi
 
 #### Unequal spatial distribution of impacts
 
-One of the major evolutions from its origins in environmental racism is a great expansion of the groups claiming to be disproportionately affected. Many groups may not even assert marginalization or historic oppression, simply disporate impacts as being unjust. For example, commenters assert injustices when one county is impacted more than another or if urban areas are impacted more than rural areas, or vice versa. 
+One of the major evolutions from its origins in environmental racism is a great expansion of the groups claiming to be disproportionately affected. Many groups may not even assert marginalization or historic oppression, simply disproportionate impacts as being unjust. For example, commenters assert injustices when one county is impacted more than another or if urban areas are impacted more than rural areas, or vice versa.  
 
 For example, a rural county in Oregon claimed that logging restrictions due to endangered species conservation increased the risk of wildfires, which disproportionately impact rural communities: 
 
@@ -336,7 +336,7 @@ For example, a rural county in Oregon claimed that logging restrictions due to e
 
 #### Hotspots 
 
-One class of spacial problem is when standards regulate averages across a geography or allow averaging or trading across pollution sources. In these cases, certain areas can become "hot spots," where the standards are exceeded but averaged or offset with other places that fall below the standard to achieve legal compliance. 
+One class of spatial problem is when standards regulate averages across a geography or allow averaging or trading across pollution sources. In these cases, certain areas can become "hot spots," where the standards are exceeded but averaged or offset with other places that fall below the standard to achieve legal compliance. 
 
 For example, commenters often raise environmental justice concerns when to pollution sources that affect them are averaged or purchase offsets from more distant sources, meaning that the closer source will pollute more than it would have if each source was required to meet the standard alone. 
 
@@ -367,7 +367,7 @@ hormone-disrupting substances than do
 men...Children of all ages are considerably more
 vulnerable than adults... [(The President’s Cancer Panel)]()
 
-This report was cited as a reason to limit workplace exposure in a wide range of policy areas agencies, including Centers for Medicare&Medicaid Services policy on electronic health records [WorkSafe, 2012](https://www.regulations.gov/comment/CMS-2012-0022-0414) and changes to Livestock and Poultry Practices required to be certified Organic by the Agricultural Marketing Service [(Frank Kleinke, 2018)](https://www.regulations.gov/comment/AMS-NOP-15-0012-61822).
+This report was cited as a reason to limit workplace exposure in a wide range of policy areas across agencies, including Centers for Medicare & Medicaid Services policy on electronic health records [[WorkSafe, 2012](https://www.regulations.gov/comment/CMS-2012-0022-0414)] and changes to Livestock and Poultry Practices required to be certified Organic by the USDA Agricultural Marketing Service [(Frank Kleinke, 2018)](https://www.regulations.gov/comment/AMS-NOP-15-0012-61822).
 
 
 #### Gender and Age
@@ -408,9 +408,9 @@ Airport noise
 In the hand-coded sample, commenters raised procedural justice issues on policies about procedures, especially reforms to the National Environmental Policy Act, which proscribes how other agencies conduct environmental reviews. 
 
 
-Overlapping with the focus on NEPA, many of the procedural justice claims came from tribes asserting consultation rights. CEQ-2019-0003-84724
+Overlapping with the focus on NEPA, many of the procedural justice claims came from tribes asserting consultation rights. <!--CEQ-2019-0003-84724
 CEQ-2019-0003-171251
-CEQ-2019-0003-169898
+CEQ-2019-0003-169898--> 
 
 ### Enforcement 
 
