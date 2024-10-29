@@ -5,6 +5,7 @@ format:
     incremental: true   
     scrollable: true 
     theme: [default, michigan.scss]
+    footer: "[judgelord.github.io/ej/water-talk](https://judgelord.github.io/ej/water-talk.html)"
 author:
   - name: Devin Judge-Lord
     affiliations:  
@@ -21,13 +22,13 @@ title-slide-attributes:
 
 ## {background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".2"}
 
-> He who determines what politics is about runs the country because the definition of conflicts allocates power. 
+> "He who determines what politics is about runs the country because the definition of conflicts allocates power." 
 - E.E. Schattschneider
 
 > "Environmental justice means something different in every context" - Monique Harden
 
 
-## 90% of U.S. law is made by agencies
+Agencies make ## 90% of U.S. law
 
 - Power plants emissions & emissions (EPA)
 - Environmental review & impact statements (CEQ)
@@ -38,7 +39,7 @@ title-slide-attributes:
 - Offshore oil and gas drilling (BOEM)
 - Pipeline safety (DOT-PHMSA)
 - Nuclear power plant safety and evacuation plans (NRC)
-- Hydrogen tax credit eligibility (IRS)
+- Energy, manufacturing, & hydrogen tax credit eligibility (IRS)
 - etc.
 
 ## Executive Order 12898 
@@ -62,7 +63,7 @@ Medium-scale hand-coded sample of all 11,000 comments from organizations on 200 
 - mostly Big Greens using generic EJ language
 - radically different meanings of EJ across commenters and administrations 
 
-## Example Murcury From Power Plants
+## Example Mercury From Power Plants
 
 
 `1990 Clean Air Act: EPA shall regulate as “appropriate and necessary” for public health`
@@ -79,7 +80,7 @@ Before the politics of who gets what, there is the politics of who the whos *are
 :::
 
 
-- 2004 Draft Rule: `“the U.S. population”`
+- 2004 Draft Rule: `“The U.S. population”`
 
   - 170,000 public comments
 
@@ -105,9 +106,9 @@ TOM ALLEN
 
  Mercury standards that protected the average person in the US did not protect certain minority communities, in this case, many native communities who traditionally ate a lot more fish. 
 
-I grew up in Wisconsin, in the center of the great lakes, and despite Friday fish fries, these regulations probably protected people in my family, BUT 
+I grew up in Wisconsin, in the center of the Great Lakes, and despite Friday fish fries, these regulations probably protected people in my family, BUT 
 
-And there is a large Hmong population that came over after the Vietnam war, and other commenters raised produced studies that certain southeast Asian immigrant populations like the Hmong also ate a lot of freshwater fish and thus had higher rates of Mercury poisoning. Similarly,  Ojibwe people in the great lakes region had higher rates of mercury poising. 
+There is a large Hmong population that came over after the Vietnam war, and other commenters produced studies that certain Southeast Asian immigrant populations like the Hmong also ate a lot of freshwater fish and thus had higher rates of Mercury poisoning. Similarly,  Ojibwe people in the Great Lakes region had higher rates of mercury poisoning. 
 
 :::
 
@@ -124,7 +125,7 @@ Dorceta Taylor describes how black-led campaigns like Johnson's fused with the A
 
 Began appearing in federal policy documents in the 1980s
 
-My aim is to add some more systematic quantitative data on the broad trends regarding the influence of the EJ movement on the federal policy agenda that Taylor and others have mapped.
+I aim to add more systematic quantitative data on the broad trends regarding the influence of the EJ movement on the federal policy agenda that Taylor and others have mapped.
 
 :::
 
@@ -369,7 +370,7 @@ dplyr::arrange(`Organization Type`) |>
   - Dominated by Big Green advocacy for non-targeted polices 
   - Increasingly used by those who are not historically marginalized (because all policy has disparate effects)
   
-- Much more focused on substantive than procedural justice, and rarely on enforcement
+- Much more focused on substantive than procedural justice and rarely on enforcement
 
 
 ## Claims about unequal spatial-temporal distributions of environmental harms
@@ -457,7 +458,7 @@ The Biden EPA used a similar logic:
 
 ## Offsetting benefits and harms
 
-From Trump administration's repeal of the Clean Power Plan EJ analysis: 
+From the Trump administration's repeal of the Clean Power Plan EJ analysis: 
 
 > While the EPA expects areas in the southeastern US to experience a modest increase in fine particle levels, areas including the Midwest will experience reduced levels of PM, yielding significant benefits in the form of fewer premature deaths and illnesses. On balance, the positive benefits of this action significantly outweigh the estimated disbenefits.
 
@@ -630,7 +631,7 @@ knitr::include_graphics(here::here("figs", "ejejPR-winrate-1.png"))
 
 ## Failing to respond
 
-Example: the Obama Nuclear Regulatory Commission  claimed to have received no input on environmental justice commenbts on Emergency Preparedness Regulations [NRC-2008-0122](https://www.regulations.gov/docket/NRC-2008-0122/unified-agenda).
+Example: the Obama Nuclear Regulatory Commission claimed to have received no input on environmental justice comments on Emergency Preparedness Regulations [NRC-2008-0122](https://www.regulations.gov/docket/NRC-2008-0122/unified-agenda).
 
 > The NRC requested public comments on any environmental justice considerations that may be related to this rule and no comments were received. 
 
@@ -650,7 +651,7 @@ Bush
 
 Obama
 
-- EPA comments to NMFS about effects on low-income fishing communitiesof Atlantic Highly Migratory Species: Atlantic Shark Management Measures; Final Amendment 5b (NOAA-NMFS-2013-0070) 
+- EPA comments to NMFS about effects on low-income fishing communities of Atlantic Highly Migratory Species: Atlantic Shark Management Measures; Final Amendment 5b (NOAA-NMFS-2013-0070) 
 <!-- oil and gas drilling --> 
 
 >The EPA submitted a comment recommending additional environmental justice information...and include in the EIS whether the proposed alternatives have any potential for disproportionate adverse impacts to minority and low-income populations. The EPA also recommended that the EIS include the approaches used to foster public participation by these populations and describe outreach conducted to all other communities that could be affected by the project because rural communities may be among the most vulnerable to health risks associated with the project.
@@ -714,7 +715,7 @@ Pr(Policy Change | President & Agency) ~ Policy Demands  \+  Coalition Size  \+ 
 
 
 :::{.notes}
-Both of my DVs---adding EJ language and changing existing EJ language--are dichotomous, so I m going to use logit regression. 
+Both of my DVs---adding EJ language and changing existing EJ language--are dichotomous, so I'm going to use logit regression. 
 
 The main models use president and agency fixed effects, so I'm focusing on variation within presidential administrations and within the agency, but I also assess differences across presidents and agencies by estimating the same models with indicators rather than fixed effects.
 
@@ -744,9 +745,9 @@ $\epsilon_{ip}$: cluster-robust errors by president
 
 :::{.notes}
 
-hereoskedasticity-robust standard-errors (White correction), where it is assumed that the errors are independent but the variance of their generative law may vary.
+Heteroscedasticity-robust standard errors (White correction), where it is assumed that the errors are independent, but the variance of their generative law may vary.
 
-If vcov = "cluster", then arbitrary correlation of the errors within clusters is accounted for. Same for vcov = "twoway": arbitrary correlation within each of the two clusters is accounted for.
+If vcov = "cluster", then the arbitrary correlation of the errors within clusters is accounted for. Same for vcov = "twoway": arbitrary correlation within each of the two clusters is accounted for.
 fixest: sandwich
 
 same as xtreg cluster in stata
@@ -773,19 +774,7 @@ $\epsilon_{ipk}$: cluster-robust errors  by president & agency
 
 Because I expect decreasing marginal effects of additional comments, both overall (i.e., public attention) and those that mention EJ (coalition size), I use logged values. 
 
-However, the conclusions are largely the same if I use a quadradic function instead. That analysis suggests that medium levels of attention are not so impactful. A small level of attention matters, and then it takes a very large amount of additional pressure to move things, which makes sense. For hypothesis testing, however, all of the effects are in the same direction, so I am going to present predicted probabilities from these models here.
-
-
-## EJ Comments by Census Race
-
-```{r ejcommentsbyrace, fig.cap = 'Estimated Racial Distribution from Census Surnames of Commenters raising "Environmental Justice" Concerns in Rulemaking', fig.height = 1.5, fig.width=2, out.width = "40%", fig.show = "hold"}
-load(here::here("data", "ej_race.Rdata"))
-
-Race %>% ggplot() + 
-  aes(y =Race, x = Probability) + 
-  geom_col() +
-  theme_minimal() +
-  theme(panel.grid.major.y = element_blank())
-```
-
+However, the conclusions are largely the same if I use a quadratic function instead. That analysis suggests that medium levels of attention are not so impactful. A small level of attention matters, and then it takes a very large amount of additional pressure to move things, which makes sense. For hypothesis testing, however, all of the effects are in the same direction, so I am going to present predicted probabilities from these models here.
 :::
+
+
