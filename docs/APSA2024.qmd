@@ -30,6 +30,7 @@ title-slide-attributes:
 
 - agencies add EJ language when pressured
 - puzzlingly little variation over time in baseline **rates** of addressing EJ *and* **responsiveness** to requests to do so
+  - yet, agencies were more responsive Biden
 
 ## Preview: **Part 2** 
 
@@ -67,10 +68,11 @@ knitr::include_graphics("figs/ej-m-PR-president-median-pres-1.png")
 
 ## Part 2: Motivation
 
-> "Similarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice advanced by each administration...
+> Similarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice advanced by each administration.
 
+<!--
 > Future research should assess the relationship between distinct types of EJ claims and corresponding policy changes."
-
+--> 
 
 ## Preliminary Findings from Hand-Coded Comments
 
@@ -132,16 +134,16 @@ dplyr::arrange(`Organization Type`) |>
 ```
 
 
-## How to interpret advocacy group adoption/cooption of EJ rhetoric
+## How to interpret advocacy group adoption/cooption of EJ rhetoric?
 
-- expanding and contested frame: 
+- a contested and expanding frame: 
 
   - any inequality across space or identity group
 
 
-## How should we interpret agency adoption of EJ rhetoric
+## How should we interpret agency adoption of EJ rhetoric? 
 
-- Mostly rebutting or dismissing complaints (most officials do not understand EJ analysis as part of their job)
+- Mostly rebutting or dismissing complaints (most officials do not consider EJ analysis to be part of their job)
 
 - But, some meaningful policy changes under all presidents
 

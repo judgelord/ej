@@ -8,7 +8,7 @@
 <link href="APSA2024_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="APSA2024_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="APSA2024_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Devin Judge-Lord">
   <title>Adoption and Cooption of the Environmental Justice Issue Frame</title>
@@ -354,7 +354,10 @@ Devin Judge-Lord
 <p>Large-scale analysis: <em>all</em> 15,000 draft and final rules from 52 agencies 2005-2024 &amp; 50,000,000+ public comments on these draft rules</p>
 <ul>
 <li class="fragment">agencies add EJ language when pressured</li>
-<li class="fragment">puzzlingly little variation over time in baseline <strong>rates</strong> of addressing EJ <em>and</em> <strong>responsiveness</strong> to requests to do so</li>
+<li class="fragment">puzzlingly little variation over time in baseline <strong>rates</strong> of addressing EJ <em>and</em> <strong>responsiveness</strong> to requests to do so
+<ul>
+<li class="fragment">yet, agencies were more responsive Biden</li>
+</ul></li>
 </ul>
 </section>
 <section id="preview-part-2" class="slide level2">
@@ -383,11 +386,11 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
 <section id="part-2-motivation" class="slide level2">
 <h2>Part 2: Motivation</h2>
 <blockquote>
-<p>“Similarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice advanced by each administration…</p>
+<p>Similarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice advanced by each administration.</p>
 </blockquote>
-<blockquote>
-<p>Future research should assess the relationship between distinct types of EJ claims and corresponding policy changes.”</p>
-</blockquote>
+<!--
+> Future research should assess the relationship between distinct types of EJ claims and corresponding policy changes."
+-->
 </section>
 <section id="preliminary-findings-from-hand-coded-comments" class="slide level2">
 <h2>Preliminary Findings from Hand-Coded Comments</h2>
@@ -409,26 +412,25 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="which-environmental-groups" class="slide level2">
 <h2>Which environmental groups?</h2>
 
 <img data-src="figs/ej-success-table.png" style="width:85.0%" class="r-stretch"></section>
 <section id="how-to-interpret-advocacy-group-adoptioncooption-of-ej-rhetoric" class="slide level2">
-<h2>How to interpret advocacy group adoption/cooption of EJ rhetoric</h2>
+<h2>How to interpret advocacy group adoption/cooption of EJ rhetoric?</h2>
 <ul>
-<li class="fragment"><p>expanding and contested frame:</p>
+<li class="fragment"><p>a contested and expanding frame:</p>
 <ul>
 <li class="fragment">any inequality across space or identity group</li>
 </ul></li>
 </ul>
 </section>
 <section id="how-should-we-interpret-agency-adoption-of-ej-rhetoric" class="slide level2">
-<h2>How should we interpret agency adoption of EJ rhetoric</h2>
+<h2>How should we interpret agency adoption of EJ rhetoric?</h2>
 <ul>
-<li class="fragment"><p>Mostly rebutting or dismissing complaints (most officials do not understand EJ analysis as part of their job)</p></li>
+<li class="fragment"><p>Mostly rebutting or dismissing complaints (most officials do not consider EJ analysis to be part of their job)</p></li>
 <li class="fragment"><p>But, some meaningful policy changes under all presidents</p></li>
 <li class="fragment"><p>But, mostly non-targeted policy advanced by historically white national advocacy groups (e.g., pollution limits, safety, public lands, marine sanctuaries)</p></li>
 <li class="fragment"><p>But, some targeted policy (catch limit exemptions, tribal consultation)</p></li>
@@ -489,8 +491,7 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -508,8 +509,7 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
 </div><div class="column" style="width:30%;">
 <h3 id="agencies-respond-to-larger-coalitions-demanding-attention-to-ej">Agencies respond to larger coalitions demanding attention to EJ</h3>
 <p>Logit (N = 11,315 rules)</p>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -527,8 +527,7 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -815,18 +814,7 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -858,7 +846,29 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -866,7 +876,7 @@ Figure&nbsp;2: Responsiveness to Pressure Address Environmental Justice where th
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

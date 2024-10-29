@@ -1,0 +1,791 @@
+---
+title: "Adoption and Cooption of the Environmental Justice Issue Frame"
+format:
+  revealjs:
+    incremental: true   
+    scrollable: true 
+    theme: [default, michigan.scss]
+author:
+  - name: Devin Judge-Lord
+    affiliations:  
+     - name: University of Michigan<br>Ford School of Public Policy
+title-slide-attributes:
+    data-background-image: "https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg"
+    data-background-size: cover
+    data-background-opacity: "0.7" 
+---
+
+```{r setup}
+#source("code/setup.R")
+```
+
+## {background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".2"}
+
+> He who determines what politics is about runs the country because the definition of conflicts allocates power. 
+- E.E. Schattschneider
+
+> "Environmental justice means something different in every context" - Monique Harden
+
+
+## 90% of U.S. law is made by agencies
+
+- Power plants emissions & emissions (EPA)
+- Environmental review & impact statements (CEQ)
+- Fisheries inspections & catch limits (NOAA-NMFS)
+- National Marine Sanctuaries (NOAA-NOS)
+- Endangered Species Act listings (NOAA-NMFS/DOI-FWS)
+- Organic certification (USDA-AMS)
+- Offshore oil and gas drilling (BOEM)
+- Pipeline safety (DOT-PHMSA)
+- Nuclear power plant safety and evacuation plans (NRC)
+- Hydrogen tax credit eligibility (IRS)
+- etc.
+
+## Executive Order 12898 
+
+## Preview: **Part 1**
+
+ Large-scale analysis: *all* 15,000 draft and final rules from 52 agencies 2005-2024 & 50,000,000 comments on these rules
+
+- Policy rarely addresses environmental justice
+- Agencies add EJ language when pressured
+  - $\uparrow$ pressure  $\rightsquigarrow$ 	$\uparrow$ change
+- Puzzlingly little variation over time in baseline **rates** of addressing EJ *and* **responsiveness** to requests to do so
+  - Yet, agencies were most responsive under Biden
+- Responsiveness varies with institutional structure
+ 
+## Preview: **Part 2** 
+
+Medium-scale hand-coded sample of all 11,000 comments from organizations on 200 rules 
+
+- adding EJ language may correlate with substantive policy change favoring public interest groups ("lobbying success")
+- mostly Big Greens using generic EJ language
+- radically different meanings of EJ across commenters and administrations 
+
+## Example Murcury From Power Plants
+
+
+`1990 Clean Air Act: EPA shall regulate as “appropriate and necessary” for public health`
+
+<!--Section 112(n)(1)(A)--> 
+
+
+. . . 
+
+Safe Levels of Mercury (For Whom?)
+
+:::{.notes}
+Before the politics of who gets what, there is the politics of who the whos *are*. What are the groups or communities deserving consideration? 
+:::
+
+
+- 2004 Draft Rule: `“the U.S. population”`
+
+  - 170,000 public comments
+
+
+- 2005 Final Rule: `"Environmental justice" for “minority populations”`
+
+
+
+
+```{r, fig.show = "hold", out.width = c("20%","20%","20%","20%")}
+#| fig-show: hold
+knitr::include_graphics("Figs/acat.png")
+knitr::include_graphics("Figs/ncai_logo.jpg")
+knitr::include_graphics("Figs/sierra_logo.png")
+knitr::include_graphics("Figs/Tom_Allen.jpeg")
+```
+
+
+
+:::{.notes}
+
+TOM ALLEN 
+
+ Mercury standards that protected the average person in the US did not protect certain minority communities, in this case, many native communities who traditionally ate a lot more fish. 
+
+I grew up in Wisconsin, in the center of the great lakes, and despite Friday fish fries, these regulations probably protected people in my family, BUT 
+
+And there is a large Hmong population that came over after the Vietnam war, and other commenters raised produced studies that certain southeast Asian immigrant populations like the Hmong also ate a lot of freshwater fish and thus had higher rates of Mercury poisoning. Similarly,  Ojibwe people in the great lakes region had higher rates of mercury poising. 
+
+:::
+
+
+## The Environmental Justice Frame {background-image="https://assets.nrdc.org/sites/default/files/styles/full_content/public/media-uploads/midwesttoxicdoughnut_25_002chicago_steel_mills-july_1965_vl_2400.jpg" background-size="cover"}
+
+
+:::{.notes}
+What is environmental justice, and why does the Biden administration require 40% of federal spending to be spent in environmental justice communities? 
+
+The EJ movement began in local resistance to toxic waste in places like the  Alt-geld Gardens housing complex on Chicago's South Side, where activists like Hazel Johnson had been organizing tenants years before a young Barak Obama showed up in 1984. Surrounded by manufacturing and toxic waste dumps, this neighborhood got the nickname “the toxic doughnut.” 
+
+Dorceta Taylor describes how black-led campaigns like Johnson's fused with the American Indian Movement, Chicano, and farmworker movements and drew on civil rights and union organizing to push the environmental justice frame onto the national policy agenda. 
+
+Began appearing in federal policy documents in the 1980s
+
+My aim is to add some more systematic quantitative data on the broad trends regarding the influence of the EJ movement on the federal policy agenda that Taylor and others have mapped.
+
+:::
+
+
+- "Environmental" policy debates are rarely about *distributions* of costs and benefits
+
+  - Reframing policy in distributive justice terms can shape normative, political, and economic analysis.
+
+
+- E.O. 12898 "Federal Actions to Address Environmental Justice" (1993)
+
+
+- For this research: "Environmental justice" is a distinct phrase (few false positives) without many synonyms (few false negatives)
+
+---
+
+### Scholars of bureaucracy focus on *technical* information
+
+
+
+:::{.notes}
+- Bureaucratic policymaking, especially, is about expertise (Wagner 2010)
+
+
+Everything we know about lobbying, especially lobbying in agency rulemaking, tells us that information is the currency of lobbying. 
+
+Information causes policymakers to change their minds, *especially* when policymakers are experts and lawyers.
+
+Indeed, research, including my own research elsewhere, shows that business groups dominate lobbying in rulemaking *because* they can generate and provide relevant information. 
+
+Thus far, by “information,” scholars generally mean technical and legal information.
+:::
+
+
+. . . 
+
+### How might *political* information matter?
+
+
+- Advancing frames about who is affected/deserving?
+- Novelty vs. legibility?
+- Pressure: 
+  - Coalition size? [(Dwidar 2021, Nelson & Yackee 2012)]()
+  - Public attention?
+ 
+---
+
+###  Little variation in **rates** of addressing EJ
+
+
+```{r}
+#| label: fig-ej-data
+#| fig-cap:  "Proposed and Final Rules by Whether they Mention Environmental Justice"
+#| out-width: 100%
+knitr::include_graphics("figs/ej-data-6.png") 
+```
+
+---
+
+###  Little variation in **rates** of addressing EJ
+
+
+```{r}
+#| label: fig-ej-data-agencies
+#| fig-cap:  "Proposed and Final Rules by Whether they Mention Environmental Justice"
+#| out-width: "100%"
+knitr::include_graphics("figs/ej-data-agencies100-1.png") 
+```
+
+
+---
+
+###  Variation in **responsiveness** to comments
+
+```{r}
+#| out-width: 100%
+
+knitr::include_graphics("figs/ej-m-PR-president-median-pres-5.png") 
+
+```
+
+Logit (N = 11,315 rules)
+
+---
+
+###  Little variation in **responsiveness** to comments
+
+```{r}
+#| label: fig-ej-m-PR-pres
+#| fig-cap: "Responsiveness to Pressure to Address Environmental Justice where the Proposed Rule Did Not Mention Environmental Justice (Logit, N = 11,315 rules)"
+#| out-width: 100%
+
+knitr::include_graphics("figs/ej-m-PR-president-median-pres-4.png") 
+
+```
+
+
+
+---
+
+:::: {.columns}  
+
+::: {.column width="35%"}
+
+### Agencies that more often address EJ are more responsive to comments demanding attention to EJ
+
+Logit (N = 11,315 rules)
+
+
+:::
+ 
+::: {.column width="65%"}
+
+```{r,  out.width = "100%"}
+
+knitr::include_graphics("figs/ej-m-PR-shareI-pres-1.png")
+
+```
+
+:::
+
+
+
+::::
+
+---
+
+:::: {.columns}  
+
+::: {.column width="65%"}
+```{r,  out.width = "100%"}
+knitr::include_graphics("figs/ej-m-PR-ejcomments-agencyFE-pres-1.png")
+```
+
+:::
+
+::: {.column width="35%"}
+
+### Agencies respond to larger coalitions demanding attention to EJ
+
+Logit (N = 11,315 rules)
+
+
+:::
+
+::::
+
+## Part 2: Motivation
+
+> Similarities across administrations in baseline rates of considering EJ and responsiveness to public pressure mask radically different definitions of environmental justice.
+
+<!--
+> Future research should assess the relationship between distinct types of EJ claims and corresponding policy changes."
+--> 
+
+## Preliminary Findings from Hand-Coded Comments
+
+---
+
+### When agencies adopt EJ language, environmental coalitions do better 
+
+:::: {.columns}  
+
+::: {.column width="25%"}
+
+Cross-sectional OLS model of coalition-level lobbying success 
+
+(N = 284)
+
+
+:::
+
+::: {.column width="75%"}
+```{r, out.width = "100%"}
+knitr::include_graphics("figs/mc1ej-obama.png")
+```
+:::
+
+
+::::
+
+---
+
+### When agencies adopt EJ language, environmental groups do better
+
+:::: {.columns}  
+
+::: {.column width="25%"}
+
+
+Within-organization (DiD) OLS model  (N = 3,932 organizations)
+
+:::
+
+::: {.column width="75%"}
+
+```{r, out.width = "100%"}
+knitr::include_graphics("figs/mo1ej-obama.png")
+```
+:::
+
+::::
+
+
+## Which groups win? 
+
+```{r substantive, out.width = "85%", fig.show = "hold"}
+
+knitr::include_graphics("figs/ej-success-table.png")
+
+```
+
+```{r eval=FALSE, include=FALSE}
+#| label: "tbl-ej-winrates"
+#| tbl-cap: "Hand-coded Lobbying Success by Type of Organization, 2005-2020"
+
+load(here::here("data", "winrate.Rdata"))
+
+winrates |> 
+  dplyr::mutate(`EJ Success Rate` = `EJ Success Rate` |>
+           scales::percent(accuracy = 1) |>
+             tidyr::replace_na("-"),
+         `Overall Success Rate` = `Overall Success Rate` |>
+           scales::percent(accuracy = 1)) |> 
+  dplyr::select(-`N raising EJ`) |>
+  # name to nest
+  dplyr::mutate(`Organization Type` = `Organization Type` |> 
+           stringr::str_replace("(State|Tribe|City)", "Government, \\1") |> 
+           stringr::str_replace("(Religious|Pressure Group|Professional Assn.|University|Environmental Group|Credit Union|Union|Frontline EJ)", "NGO, \\1") |> 
+           stringr::str_replace("(Finance|Law Firm)", "Business, \\1") |> 
+           stringr::str_replace("(NGO$|Business$)", "\\1 (Overall)")) |> 
+dplyr::arrange(`Organization Type`) |> 
+  knitr::kable()
+```
+
+
+## How to interpret advocacy group adoption/cooption of EJ rhetoric?
+
+- A contested and expanding frame: 
+
+  - Any inequality across space, time, or identity group
+  - Dominated by Big Green advocacy for non-targeted polices 
+  - Increasingly used by those who are not historically marginalized (because all policy has disparate effects)
+  
+- Much more focused on substantive than procedural justice, and rarely on enforcement
+
+
+## Claims about unequal spatial-temporal distributions of environmental harms
+
+
+
+Place-based EJ Groups: 
+
+- Hotspots caused by averaging or trading among pollution sources  $\rightsquigarrow$ less pollution reduction (local EJ groups)
+- Cumulative impacts caused by multiple co-located harms 
+   - permitting decisions should account for nearby facilities that impact the same area
+- Cumulative impacts caused harms that persist over time
+   - permitting decisions for a facility should account for historic or naturally occurring harms
+- EJScreen, MiEJScreen
+
+Big Greens
+- Unequal baselines  $\rightsquigarrow$  any overall reduction of pollution disproportionately benefits burdened communities, even when policy does not target them
+
+<!--
+##  Cumulative similar impacts 
+
+National Environmental Policy Act 
+
+> The Elimination of the Cumulative Impacts Analysis Raises Environmental Justice Concerns...Executive Order 12898 requires that each agency ensure that its actions foster environmental justice concerns. (CEQ-2019-0003-160397)
+
+National Emission Standards for Hazardous Air Pollutants: Plywood and Composite Wood Products (EPA-HQ-OAR-2003-0048)
+
+> "The rule also does not involve special consideration of environmental justice-related issues as required by EO 12898.”
+--> 
+
+## Claims about unequal spatial distributions of environmental harms
+
+Many groups don't even assert marginalization or historic oppression
+
+. . . 
+
+> Smoke from such wildfires substantially impacts public health. These serious health impacts are an environmental justice issue that many rural counties throughout Oregon face because of the federal government’s failure, or inability, to responsibly manage forests due, in large part, to unnecessary and/or unwarranted restrictions that all center around the spotted owl... [(Douglas County, 2008)](https://www.regulations.gov/comment/FWS-R1-ES-2020-0050-0539)
+
+## Identity groups
+
+In addition to geographic-based inequality, commenters raise inequalities linked to identities, including race, gender, age, and sector of employment.
+
+>  People from
+disadvantaged populations are more likely
+to be employed in occupations with higher
+levels of exposure (e.g., mining, construction,
+manufacturing, agriculture, certain service
+sector occupations) and to live in more highly
+contaminated communities. The reality of
+this unequal burden is not just a health issue,
+but an issue of environmental justice. While all Americans now carry many
+foreign chemicals in their bodies, women
+often have higher levels of many toxic and
+hormone-disrupting substances than do
+men...Children of all ages are considerably more
+vulnerable than adults... [(The President’s Cancer Panel)]()
+
+## Intersections of space and identity 
+
+Language and culture overlap with specific geographies, especially with Native lands. Native commenters frequently assert harm to certain locations as harm to their culture. 
+
+- Cumulative impacts at home and at work
+
+
+## How should we interpret agency adoption of EJ rhetoric? 
+
+- Mostly rebutting or dismissing complaints (most officials do not consider EJ analysis to be part of their job) with boilerplate EJ language asserting "no adverse effects on low-income or minority populations"
+
+- But, some meaningful policy changes under all presidents
+
+- But, mostly non-targeted policy advanced by historically white national advocacy groups (e.g., pollution limits, safety, public lands, marine sanctuaries)
+
+- But, some targeted policy (catch limit exemptions, tribal consultation)
+
+## Dismissing the need for EJ analysis
+
+If the trend is in the right direction, the future is to be better than the past, and thus, comparative analysis of alternative futures with and without the policy is not needed. 
+
+> EPA believes that the power sector is already on the path to achieving the CO2 reductions required by the CPP. Therefore, the EPA does not believe it would have any significant impact on EJ-affected communities. [(EPA-HQ-OAR-2017-0355, 2019)](https://www.federalregister.gov/documents/2019/07/08/2019-13507/repeal-of-the-clean-power-plan-emission-guidelines-for-greenhouse-gas-emissions-from-existing)
+
+The Biden EPA used a similar logic: 
+
+> ...there is potential for some geographic areas and demographic groups to experience small increases in ozone concentrations relative to the baseline levels, which are projected to be substantially lower than today's levels. [(EPA-HQ-OAR-2023-0072-8244, 2024)](https://www.regulations.gov/document/EPA-HQ-OAR-2023-0072-8244)
+
+
+## Offsetting benefits and harms
+
+From Trump administration's repeal of the Clean Power Plan EJ analysis: 
+
+> While the EPA expects areas in the southeastern US to experience a modest increase in fine particle levels, areas including the Midwest will experience reduced levels of PM, yielding significant benefits in the form of fewer premature deaths and illnesses. On balance, the positive benefits of this action significantly outweigh the estimated disbenefits.
+
+. . . 
+
+$\longrightarrow$ allows local pollution hot spots
+
+## Citing limits on unequal harms 
+
+The Biden EPA addressed EJ complaints that emissions trading could lead to pollution hot spots but asserted that the policy included backstops intended to limit inequalities: 
+
+> The EPA is cognizant of these concerns and believes that emission trading and averaging are not necessarily incompatible with environmental justice. The EPA is including limitations on the use of compliance flexibilities in state plans that should help address these EJ concerns.
+
+Similarly, the Bush EPA cited other policies as backstops, arguing that deregulating hazardous air pollution would have no effect on nearby minority and low-income communities because polluters were still required to have a plan.
+
+> "The only difference from current regulation is that the source is not required to follow the plan." [EPA-HQ-OAR-2004-0094:	National Emission Standards for Hazardous Air Pollutants: General Provisions: Impacts]()
+
+
+
+## Coopting the frame
+
+### Consumer prices as an environmental justice issue
+
+> Low-income and minority communities located in proximity to EGUs may have experienced an improvement in air quality as a result of the emissions reductions. However, the EPA did not address the potential distribution of compliance costs associated with the CPP...Low-income households typically spend a greater share of their household income on energy, and to the extent that this action reduces energy costs, those low-income households will experience lower energy bills. [(EPA-HQ-OAR-2017-0355, 2017)](https://www.federalregister.gov/documents/2017/10/16/2017-22349/repeal-of-carbon-pollution-emission-guidelines-for-existing-stationary-sources-electric-utility)
+
+:::{.notes}
+When the Trump Administration repealed the Clean Power Plan (CPP) regulations on power plants (Electric Generating Units or EGUs), the Trump EPA advanced an argument that, despite harming air quality, the repeal served environmental justice because it preserved jobs and lowered utility bills in low-income communities near power plants. This section of the proposed rule on environmental justice then went on to link job loss to health risks and substance abuse.
+:::
+
+## Coopting the frame
+
+### "Job-killing" regulation as an environmental justice issue
+
+> While employment effects are not experienced uniformly across the population and may be offset by new opportunities in different sectors, localized impacts could have adversely affected individuals and their communities... In addition, past research has suggested that involuntary job loss may increase risks to health, substance abuse, and even mortality. [(EPA-HQ-OAR-2017-0355, 2017)](https://www.federalregister.gov/documents/2017/10/16/2017-22349/repeal-of-carbon-pollution-emission-guidelines-for-existing-stationary-sources-electric-utility)
+
+
+:::{.notes}
+When the Trump Administration repealed the Clean Power Plan (CPP) regulations on power plants (Electric Generating Units or EGUs), the Trump EPA advanced an argument that, despite harming air quality, the repeal served environmental justice because it preserved jobs and lowered utility bills in low-income communities near power plants. This section of the proposed rule on environmental justice then went on to link job loss to health risks and substance abuse.
+:::
+
+# Thank you! {background-color="white" background-image="https://artofthegreennewdeal.net/wp-content/uploads/2020/08/climate-justice-jobs-mother-1024x645.jpg" background-size="cover" background-opacity=".5"}
+
+Comments 🙏: [judgelor@umich.edu](mailto:judgelor@umich.edu)
+
+
+Slides: [judgelord.github.io/ej/water-talk](https://judgelord.github.io/ej/water-talk.html)
+
+# Extra slides 
+
+
+---
+
+### Agencies respond to larger coalitions demanding attention to EJ
+
+
+```{r,  out.width = "100%"}
+knitr::include_graphics("figs/ej-m-PR-ejcomments-agencyFE-1.png")
+```
+
+
+# Additional Descriptives 
+
+
+@fig-ej-pairs shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that "environmental justice" appeared in the text. Triangles indicate that it did not. Solid lines indicate a change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year---each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.
+
+```{r fig-ej-pairs, out.width="100%",  fig.cap = "Draft and Final Rule Pairs"}
+knitr::include_graphics(here::here("figs", "ej-pairs-1.png"))
+```
+
+
+<!--
+@fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. @fig-ej-data-pr shows these rates of mentioning environmental justice in proposed rules---i.e., the baseline rates of addressing environmental justice, prior to pressure during the public comment period. 
+
+```{r fig-ej-data-pr, fig.cap = "Proposed and Final Rules by Whether they Address Environmental Justice"}
+
+knitr::include_graphics(here::here("figs", "ej-data-ejpr-1.png") ) ##  
+```
+--> 
+
+\clearpage
+
+## Rates of Addressing EJ by President and Agency
+
+
+```{r}
+#| label: tbl-ej-rates-president
+#| tbl-cap: 'Rates of Mentioning "Environmental Justice" in Final Rules'
+
+
+load(here::here("data", "ej_rates.Rdata"))
+
+ej_rates_president |>
+  knitr::kable(format = "latex",# "pipe", # "latex"?
+                     booktabs = T,
+                     #linesep = "\\addlinespace",
+                     align = "l") |>
+        kableExtra::kable_styling(font_size = 10, 
+                      full_width = F,
+                      latex_options = "repeat_header")
+```
+
+
+## Rates of Mentioning "Environmental Justice" in Final Rules
+
+```{r}
+#| label: tbl-ej-rates-agency
+
+load(here::here("data", "ej_rates.Rdata"))
+
+ej_rates |> 
+  knitr::kable(format = "latex",# "pipe", # "latex"?
+                     booktabs = T,
+                     #linesep = "\\addlinespace",
+                     align = "l") |>
+        kableExtra::kable_styling(font_size = 10, 
+                      full_width = F,
+                      latex_options = "repeat_header")
+```
+
+
+## The twenty agencies that most frequently mention EJ in final rules
+
+```{r}
+#| label: tbl-ej-rates-president-agency
+#| tbl-cap: 'Rates of Mentioning "Environmental Justice" in Final Rules'
+
+load(here::here("data", "ej_rates.Rdata"))
+
+ej_rates_president_agency |> 
+  knitr::kable(format = "latex",# "pipe", # "latex"?
+                     booktabs = T,
+                     #linesep = "\\addlinespace",
+                     align = "l") |>
+      kableExtra::kable_styling(font_size = 10, 
+                      full_width = F,
+                      latex_options = "repeat_header")
+```
+
+
+<!--
+The Forest Service (FS) has by far the highest predicted baseline rate of adding EJ to rules. This may be because the forest service is mainly in
+the business of managing forests, leasing timber rights, and controlling
+wildfires. These types of decisions have acute distributional
+effects. Forest Service rule-writers may also simply have an institutional practice of addressing E.O.12898. 
+Similarly, the Federal
+Railroad Administration,  Federal Highway
+Administration Federal Motor Carrier Safety Administration all have large baseline rates of adding EJ to final rules. These agencies make decisions about infrastructure projects with implications for
+neighborhood environments and air quality. Environmental justice may
+often come up.
+Research agencies, including the Nuclear Regulatory Commission (NRC) and National Oceanographic and Atmospheric Administration (NOAA), also have a low but significant baseline rate of adding EJ to final rules.
+-->
+
+
+## Rates of Change With and Without Comments Raising Environmental Justice
+
+```{r ej-descriptive, , }
+#| fig-show: hold
+#| out-width: "49%"
+#| fig-column: 2
+#| fig-cap: "Rates of Change Between Draft and Final Rule"
+
+
+knitr::include_graphics(here::here("figs", "ej-PR-winrate-1.png"))
+
+knitr::include_graphics(here::here("figs", "ejejPR-winrate-1.png"))
+
+#include_graphics(here::here("figs", "ej-PR-winrate-agency-1.png"))
+```
+
+
+## Failing to respond
+
+Example: the Obama Nuclear Regulatory Commission  claimed to have received no input on environmental justice commenbts on Emergency Preparedness Regulations [NRC-2008-0122](https://www.regulations.gov/docket/NRC-2008-0122/unified-agenda).
+
+> The NRC requested public comments on any environmental justice considerations that may be related to this rule and no comments were received. 
+
+This was incorrect. A comment from Hudson River Sloop Clearwater, Inc. raised serious EJ concerns that went unaddressed in the rule:
+
+> The rules and guidance are based on a fantasy world in which the terrain around nuclear power stations is perfectly flat, radiation plumes do not move up and down, the wind blows at the same speed in a constant direction throughout an accident, and most people follow the instructions they are given about the need to evacuate.
+
+> **Need for Site-Specific Analysis of Transport-Dependent Populations:** The present guidance suggests that because 50% of residents would offer rides to those in need, approximately 50% of the transit-dependent population in the EPZ would rideshare. Criteria for Development of ETE Studies (April 23, 2009) at 13. This assumption fails to account for the likely separation of transit-dependent environmental justice populations from more affluent populations. Furthermore, it takes no account of attitudes towards race and the potential reluctance of whites to offer rides to African- Americans. Instead of presuming that 50% of the transit-dependent population will rideshare, the presumption should be that only a small percentage will rideshare unless the licensee can show that there are no geographical concentrations of transit-dependent populations and that there is no racial or sociological bias with regard to ridesharing.
+
+> ...people would be foolish to follow the directions of first responders if they are based on totally unrealistic modeling. Indeed, it is doubtful whether people would follow instructions even if they were based on the best predictions possible. The experiences during Hurricane Katrina also underline that it is even more doubtful whether the response planned for environmental justice communities would actually materialize.
+
+## Success Stories
+
+Bush 
+
+- Mercury Rules
+
+Obama
+
+- EPA comments to NMFS about effects on low-income fishing communitiesof Atlantic Highly Migratory Species: Atlantic Shark Management Measures; Final Amendment 5b (NOAA-NMFS-2013-0070) 
+<!-- oil and gas drilling --> 
+
+>The EPA submitted a comment recommending additional environmental justice information...and include in the EIS whether the proposed alternatives have any potential for disproportionate adverse impacts to minority and low-income populations. The EPA also recommended that the EIS include the approaches used to foster public participation by these populations and describe outreach conducted to all other communities that could be affected by the project because rural communities may be among the most vulnerable to health risks associated with the project.
+
+> NMFS appreciates these recommendations from the EPA and has added additional information to the environmental justice discussion in Section 9.4 of the FEIS...Demographic data indicate that coastal counties with fishing communities are variable in terms of social indicators like income, employment, race, and ethnic composition.
+
+## Getting policymakers talking about climate & EJ
+
+```{r, out.width="100%"}
+knitr::include_graphics("figs/cj-data-agencies100-2.png")
+```
+
+---
+
+```{r, out.width="100%"}
+knitr::include_graphics("figs/cj-data-agencies-2.png")
+```
+
+---
+
+### Getting policymakers talking about climate & EJ
+
+From 2005 to 2020
+
+- 8% of relevant agency rules addressed climate change, 15% mentioned EJ 
+
+- 20% of all public comments mentioned climate change, 12% mentioned EJ 
+
+- 1000 supporters = ~ 65 percentage point increase in the probability that the agency addresses climate change, 46 percentage point increase that the agency addresses EJ 
+
+- Responsiveness is surprisingly stable across administrations but varies wildly across agencies
+
+
+## Measuring influence
+
+### DV 1: Getting policymakers' attention/engagement/response
+
+1.1 Adding policy language (All 11,315 rules)   
+1.2 Changing policy language (All 1,864 rules)
+
+### DV 2: Getting substantive policy demands
+
+Lobbying success for all commenters on a random sample of 150 rules (10,894 hand-coded comments)
+
+2.1 Across 284 coalitions   
+2.2 Within 3,932 organizations
+ 
+
+
+## Modeling the probability of policy change
+
+
+### (1) Variation across agencies:  
+Pr(Policy Change | President) ~ Policy Demands  \+ Coalition Size  \+ Public Attention \+ Agency's Prior Rate of Addressing Environmental Justice
+(\+ Interactions) 
+
+
+### (2) Variation within agencies:  
+Pr(Policy Change | President & Agency) ~ Policy Demands  \+  Coalition Size  \+  Public Attention
+(\+ Interactions)
+
+
+:::{.notes}
+Both of my DVs---adding EJ language and changing existing EJ language--are dichotomous, so I m going to use logit regression. 
+
+The main models use president and agency fixed effects, so I'm focusing on variation within presidential administrations and within the agency, but I also assess differences across presidents and agencies by estimating the same models with indicators rather than fixed effects.
+
+Because log odds coefficients are hard to interpret and because my models have interactions, I am going to skip the regression table and just show you predicted probabilities.
+:::
+
+
+---
+
+### (1.1a) Logit: $Y_i = \beta_{1:n} X_{i} + \delta_p + \epsilon_{ip}$
+
+$Y_i$: the log odds of change in rule $i$ by agency $k$ under president $p$ <!--: $log[\frac{P(EJ\ in\ FR)}{1−P(EJ\ in\ FR)}]$-->
+
+
+$X_{i}$: features of rule $i$
+  - whether comments raise environmental justice
+  
+  - agency $k$'s share of prior draft rules mentioning environmental justice 
+
+  - the number of organizations raising environmental justice (logged)
+
+  - the total number of comments (logged) $\times$ whether comments raise environmental justice
+  
+$\delta_p$: president fixed effects   
+$\epsilon_{ip}$: cluster-robust errors by president
+
+
+:::{.notes}
+
+hereoskedasticity-robust standard-errors (White correction), where it is assumed that the errors are independent but the variance of their generative law may vary.
+
+If vcov = "cluster", then arbitrary correlation of the errors within clusters is accounted for. Same for vcov = "twoway": arbitrary correlation within each of the two clusters is accounted for.
+fixest: sandwich
+
+same as xtreg cluster in stata
+
+:::
+
+---
+
+### (1.1b) Logit:  $Y_i = \beta_{1:n} X_{i} + \gamma_k + \delta_p + \epsilon_{ipk}$
+
+$Y_i$: the log odds of change in rule $i$ by agency $k$ under president $p$ <!--: $log[\frac{P(EJ\ in\ FR)}{1−P(EJ\ in\ FR)}]$-->
+
+$X_{i}$: features of rule $i$
+  - whether comments raise environmental justice
+  - the number of organizations raising environmental justice (logged)
+  - the total number of comments (logged) $\times$ whether comments raise environmental justice
+
+$\gamma_k + \delta_p$: president & agency fixed effects   
+$\epsilon_{ipk}$: cluster-robust errors  by president & agency
+
+
+
+:::{.notes}
+
+Because I expect decreasing marginal effects of additional comments, both overall (i.e., public attention) and those that mention EJ (coalition size), I use logged values. 
+
+However, the conclusions are largely the same if I use a quadradic function instead. That analysis suggests that medium levels of attention are not so impactful. A small level of attention matters, and then it takes a very large amount of additional pressure to move things, which makes sense. For hypothesis testing, however, all of the effects are in the same direction, so I am going to present predicted probabilities from these models here.
+
+
+## EJ Comments by Census Race
+
+```{r ejcommentsbyrace, fig.cap = 'Estimated Racial Distribution from Census Surnames of Commenters raising "Environmental Justice" Concerns in Rulemaking', fig.height = 1.5, fig.width=2, out.width = "40%", fig.show = "hold"}
+load(here::here("data", "ej_race.Rdata"))
+
+Race %>% ggplot() + 
+  aes(y =Race, x = Probability) + 
+  geom_col() +
+  theme_minimal() +
+  theme(panel.grid.major.y = element_blank())
+```
+
+:::
