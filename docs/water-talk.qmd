@@ -30,19 +30,27 @@ title-slide-attributes:
 
 ## Agencies make 90% of U.S. law
 
-- Power plants emissions & emissions (EPA)
+- Power plant, manufacturing, & vehicle emissions (EPA)
 - Environmental review & impact statements (CEQ)
 - Fisheries inspections & catch limits (NOAA-NMFS)
 - National Marine Sanctuaries (NOAA-NOS)
 - Endangered Species Act listings (NOAA-NMFS/DOI-FWS)
-- Organic certification (USDA-AMS)
+- Organic certification requirements (USDA-AMS)
 - Offshore oil and gas drilling (BOEM)
-- Pipeline safety (DOT-PHMSA)
+- Pipeline safety (DOT-PHMSA) & transit grants (DOT-FTA)
 - Nuclear power plant safety and evacuation plans (NRC)
 - Energy, manufacturing, & hydrogen tax credit eligibility (IRS)
 - etc.
 
-## Executive Order 12898 
+## Executive Order 12898
+
+Federal Actions to Address Environmental Justice in Minority Populations and Low-Income Populations (1994)
+
+>  "each Federal agency shall make achieving environmental justice part of its mission by identifying and addressing, as appropriate, disproportionately high and adverse human health or environmental effects of its programs, policies, and activities on minority populations and low-income populations" 
+
+Executive Order 14096 (2023)
+
+> "a whole-of-government commitment to environmental justice"
 
 ## Preview: **Part 1**
 
@@ -129,16 +137,14 @@ I aim to add more systematic quantitative data on the broad trends regarding the
 
 :::
 
+Why does this matter? 
 
 - "Environmental" policy debates are rarely about *distributions* of costs and benefits
 
   - Reframing policy in distributive justice terms can shape normative, political, and economic analysis.
 
 
-- E.O. 12898 "Federal Actions to Address Environmental Justice" (1993)
-
-
-- For this research: "Environmental justice" is a distinct phrase (few false positives) without many synonyms (few false negatives)
+- For this research: "environmental justice" is a distinct phrase (few false positives) without many synonyms (few false negatives)
 
 ---
 
@@ -173,7 +179,7 @@ Thus far, by “information,” scholars generally mean technical and legal info
  
 ---
 
-###  Little variation in **rates** of addressing EJ
+###  Little variation in **rates** of addressing EJ Across Administrations
 
 
 ```{r}
@@ -185,8 +191,7 @@ knitr::include_graphics("figs/ej-data-6.png")
 
 ---
 
-###  Little variation in **rates** of addressing EJ
-
+###  Large variation in **rates** of addressing EJ Across Agencies
 
 ```{r}
 #| label: fig-ej-data-agencies
@@ -522,13 +527,6 @@ knitr::include_graphics("figs/ej-m-PR-ejcomments-agencyFE-1.png")
 # Additional Descriptives 
 
 
-@fig-ej-pairs shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that "environmental justice" appeared in the text. Triangles indicate that it did not. Solid lines indicate a change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year---each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.
-
-```{r fig-ej-pairs, out.width="100%",  fig.cap = "Draft and Final Rule Pairs"}
-knitr::include_graphics(here::here("figs", "ej-pairs-1.png"))
-```
-
-
 <!--
 @fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. @fig-ej-data-pr shows these rates of mentioning environmental justice in proposed rules---i.e., the baseline rates of addressing environmental justice, prior to pressure during the public comment period. 
 
@@ -545,17 +543,13 @@ knitr::include_graphics(here::here("figs", "ej-data-ejpr-1.png") ) ##
 
 ```{r}
 #| label: tbl-ej-rates-president
-#| tbl-cap: 'Rates of Mentioning "Environmental Justice" in Final Rules'
 
 
 load(here::here("data", "ej_rates.Rdata"))
 
 ej_rates_president |>
-  knitr::kable(format = "latex",# "pipe", # "latex"?
-                     booktabs = T,
-                     #linesep = "\\addlinespace",
-                     align = "l") |>
-        kableExtra::kable_styling(font_size = 10, 
+  knitr::kable() |>
+        kableExtra::kable_styling(font_size = 30, 
                       full_width = F,
                       latex_options = "repeat_header")
 ```
@@ -569,30 +563,23 @@ ej_rates_president |>
 load(here::here("data", "ej_rates.Rdata"))
 
 ej_rates |> 
-  knitr::kable(format = "latex",# "pipe", # "latex"?
-                     booktabs = T,
-                     #linesep = "\\addlinespace",
-                     align = "l") |>
-        kableExtra::kable_styling(font_size = 10, 
+  knitr::kable() |>
+        kableExtra::kable_styling(font_size = 30, 
                       full_width = F,
                       latex_options = "repeat_header")
 ```
 
 
-## The twenty agencies that most frequently mention EJ in final rules
+## Agencies that most often mention EJ in rules
 
 ```{r}
 #| label: tbl-ej-rates-president-agency
-#| tbl-cap: 'Rates of Mentioning "Environmental Justice" in Final Rules'
 
 load(here::here("data", "ej_rates.Rdata"))
 
 ej_rates_president_agency |> 
-  knitr::kable(format = "latex",# "pipe", # "latex"?
-                     booktabs = T,
-                     #linesep = "\\addlinespace",
-                     align = "l") |>
-      kableExtra::kable_styling(font_size = 10, 
+  knitr::kable() |>
+      kableExtra::kable_styling(font_size = 30, 
                       full_width = F,
                       latex_options = "repeat_header")
 ```
@@ -612,14 +599,15 @@ Research agencies, including the Nuclear Regulatory Commission (NRC) and Nationa
 -->
 
 
-## Rates of Change With and Without Comments Raising Environmental Justice
 
-```{r ej-descriptive, , }
+## 
+
+:::: {.columns}
+
+::: {.column width="75%"}
+```{r}
 #| fig-show: hold
-#| out-width: "49%"
-#| fig-column: 2
-#| fig-cap: "Rates of Change Between Draft and Final Rule"
-
+#| out-width: "100%"
 
 knitr::include_graphics(here::here("figs", "ej-PR-winrate-1.png"))
 
@@ -628,6 +616,14 @@ knitr::include_graphics(here::here("figs", "ejejPR-winrate-1.png"))
 #include_graphics(here::here("figs", "ej-PR-winrate-agency-1.png"))
 ```
 
+:::
+
+::: {.column width="25%"}
+
+Rates of Change With and Without Comments Raising Environmental Justice
+:::
+
+::::
 
 ## Failing to respond
 

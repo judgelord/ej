@@ -321,6 +321,8 @@
       margin-right: 0; 
     }
   </style>
+  <script src="water-talk_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="water-talk_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -353,14 +355,14 @@ Devin Judge-Lord
 <section id="agencies-make-90-of-u.s.-law" class="slide level2">
 <h2>Agencies make 90% of U.S. law</h2>
 <ul>
-<li class="fragment">Power plants emissions &amp; emissions (EPA)</li>
+<li class="fragment">Power plant, manufacturing, &amp; vehicle emissions (EPA)</li>
 <li class="fragment">Environmental review &amp; impact statements (CEQ)</li>
 <li class="fragment">Fisheries inspections &amp; catch limits (NOAA-NMFS)</li>
 <li class="fragment">National Marine Sanctuaries (NOAA-NOS)</li>
 <li class="fragment">Endangered Species Act listings (NOAA-NMFS/DOI-FWS)</li>
-<li class="fragment">Organic certification (USDA-AMS)</li>
+<li class="fragment">Organic certification requirements (USDA-AMS)</li>
 <li class="fragment">Offshore oil and gas drilling (BOEM)</li>
-<li class="fragment">Pipeline safety (DOT-PHMSA)</li>
+<li class="fragment">Pipeline safety (DOT-PHMSA) &amp; transit grants (DOT-FTA)</li>
 <li class="fragment">Nuclear power plant safety and evacuation plans (NRC)</li>
 <li class="fragment">Energy, manufacturing, &amp; hydrogen tax credit eligibility (IRS)</li>
 <li class="fragment">etc.</li>
@@ -368,6 +370,14 @@ Devin Judge-Lord
 </section>
 <section id="executive-order-12898" class="slide level2">
 <h2>Executive Order 12898</h2>
+<p>Federal Actions to Address Environmental Justice in Minority Populations and Low-Income Populations (1994)</p>
+<blockquote>
+<p>“each Federal agency shall make achieving environmental justice part of its mission by identifying and addressing, as appropriate, disproportionately high and adverse human health or environmental effects of its programs, policies, and activities on minority populations and low-income populations”</p>
+</blockquote>
+<p>Executive Order 14096 (2023)</p>
+<blockquote>
+<p>“a whole-of-government commitment to environmental justice”</p>
+</blockquote>
 </section>
 <section id="preview-part-1" class="slide level2">
 <h2>Preview: <strong>Part 1</strong></h2>
@@ -487,13 +497,13 @@ Devin Judge-Lord
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<p>Why does this matter?</p>
 <ul>
 <li class="fragment"><p>“Environmental” policy debates are rarely about <em>distributions</em> of costs and benefits</p>
 <ul>
 <li class="fragment">Reframing policy in distributive justice terms can shape normative, political, and economic analysis.</li>
 </ul></li>
-<li class="fragment"><p>E.O. 12898 “Federal Actions to Address Environmental Justice” (1993)</p></li>
-<li class="fragment"><p>For this research: “Environmental justice” is a distinct phrase (few false positives) without many synonyms (few false negatives)</p></li>
+<li class="fragment"><p>For this research: “environmental justice” is a distinct phrase (few false positives) without many synonyms (few false negatives)</p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -532,14 +542,14 @@ Devin Judge-Lord
 </section>
 <section class="slide level2">
 
-<h3 id="little-variation-in-rates-of-addressing-ej">Little variation in <strong>rates</strong> of addressing EJ</h3>
+<h3 id="little-variation-in-rates-of-addressing-ej-across-administrations">Little variation in <strong>rates</strong> of addressing EJ Across Administrations</h3>
 
 <img data-src="figs/ej-data-6.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;1: Proposed and Final Rules by Whether they Mention Environmental Justice
 </p></section>
 <section class="slide level2">
 
-<h3 id="little-variation-in-rates-of-addressing-ej-1">Little variation in <strong>rates</strong> of addressing EJ</h3>
+<h3 id="large-variation-in-rates-of-addressing-ej-across-agencies">Large variation in <strong>rates</strong> of addressing EJ Across Agencies</h3>
 
 <img data-src="figs/ej-data-agencies100-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;2: Proposed and Final Rules by Whether they Mention Environmental Justice
@@ -809,8 +819,6 @@ National Emission Standards for Hazardous Air Pollutants: Plywood and Composite 
 <section>
 <section id="additional-descriptives" class="title-slide slide level1 center">
 <h1>Additional Descriptives</h1>
-<p><a href="#/fig-ej-pairs" class="quarto-xref">Figure&nbsp;4</a> shows the draft and final rule pairs used in each measure, with Measure 1 leveraging variation in final rules where the draft contained no mention of EJ and Measure 2 leveraging variation in the text addressing EJ when the draft did address EJ. Circles indicate that “environmental justice” appeared in the text. Triangles indicate that it did not. Solid lines indicate a change in rule text; dashed lines indicate no change (one and zero, respectively, for the dependent variable). For visual clarity, draft and final rules are grouped by year—each point may represent hundreds of draft or final rules published that year. In the models, the president variable corresponds to the date the final rule is published since this is the administration in power when the decision to change or not change the rule text is finalized.</p>
-
 <!--
 @fig-ej-data shows the rates of mentioning environmental justice for the primary time period for these data. @fig-ej-data-pr shows these rates of mentioning environmental justice in proposed rules---i.e., the baseline rates of addressing environmental justice, prior to pressure during the public comment period. 
 
@@ -824,57 +832,729 @@ National Emission Standards for Hazardous Air Pollutants: Plywood and Composite 
 
 
 -->
-<img data-src="../figs/ej-pairs-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;4: Draft and Final Rule Pairs
-</p></section>
+</section>
 <section id="rates-of-addressing-ej-by-president-and-agency" class="slide level2">
 <h2>Rates of Addressing EJ by President and Agency</h2>
-<div class="cell">
-<div id="tbl-ej-rates-president" class="cell quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ej-rates-president-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Rates of Mentioning “Environmental Justice” in Final Rules
-</figcaption>
-<div aria-describedby="tbl-ej-rates-president-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-ej-rates-president" class="cell">
 <div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">President</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Rules</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Mention EJ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Clinton</td>
+<td style="text-align: right;">1438</td>
+<td style="text-align: left;">14.58%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Biden</td>
+<td style="text-align: right;">6436</td>
+<td style="text-align: left;">11.56%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Obama</td>
+<td style="text-align: right;">12055</td>
+<td style="text-align: left;">9.66%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">G.W. Bush</td>
+<td style="text-align: right;">10280</td>
+<td style="text-align: left;">7.07%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Trump</td>
+<td style="text-align: right;">5521</td>
+<td style="text-align: left;">4.79%</td>
+</tr>
+</tbody>
+</table>
 
-</div>
-</div>
-</figure>
+
 </div>
 </div>
 </section>
 <section id="rates-of-mentioning-environmental-justice-in-final-rules" class="slide level2">
 <h2>Rates of Mentioning “Environmental Justice” in Final Rules</h2>
-<div class="cell">
-<div id="tbl-ej-rates-agency" class="cell quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-ej-rates-agency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2
-</figcaption>
-<div aria-describedby="tbl-ej-rates-agency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-ej-rates-agency" class="cell">
 <div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Agency</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Rules</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Mention EJ</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">FTA</td>
+<td style="text-align: right;">364</td>
+<td style="text-align: left;">70.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FHWA</td>
+<td style="text-align: right;">856</td>
+<td style="text-align: left;">62.79%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CEQ</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">50.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FEMA</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: left;">42.86%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EPA</td>
+<td style="text-align: right;">3309</td>
+<td style="text-align: left;">41.27%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FRA</td>
+<td style="text-align: right;">1058</td>
+<td style="text-align: left;">36.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BOEM</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: left;">31.58%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PHMSA</td>
+<td style="text-align: right;">1468</td>
+<td style="text-align: left;">30.77%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FMCSA</td>
+<td style="text-align: right;">669</td>
+<td style="text-align: left;">25.76%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSEE</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: left;">17.65%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BLM</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: left;">15.79%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">COE</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: left;">14.63%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FS</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: left;">13.33%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RBS</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: left;">12.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">USDA</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: left;">11.11%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NHTSA</td>
+<td style="text-align: right;">1954</td>
+<td style="text-align: left;">10.78%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSA</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: left;">8.33%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DOT</td>
+<td style="text-align: right;">228</td>
+<td style="text-align: left;">7.89%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NTSB</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">7.69%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NRC</td>
+<td style="text-align: right;">660</td>
+<td style="text-align: left;">5.87%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RUS</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: left;">5.13%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CCC</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: left;">4.55%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RHS</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: left;">4.08%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GSA</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: left;">2.67%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DOE</td>
+<td style="text-align: right;">143</td>
+<td style="text-align: left;">2.27%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BIA</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: left;">2.22%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HUD</td>
+<td style="text-align: right;">405</td>
+<td style="text-align: left;">1.85%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HHS</td>
+<td style="text-align: right;">148</td>
+<td style="text-align: left;">1.77%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NOAA</td>
+<td style="text-align: right;">3140</td>
+<td style="text-align: left;">1.66%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TREAS</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: left;">1.56%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DOD</td>
+<td style="text-align: right;">483</td>
+<td style="text-align: left;">1.47%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EBSA</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">1.28%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FWS</td>
+<td style="text-align: right;">1374</td>
+<td style="text-align: left;">0.67%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EERE</td>
+<td style="text-align: right;">414</td>
+<td style="text-align: left;">0.56%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FDA</td>
+<td style="text-align: right;">615</td>
+<td style="text-align: left;">0.54%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMS</td>
+<td style="text-align: right;">764</td>
+<td style="text-align: left;">0.19%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IRS</td>
+<td style="text-align: right;">964</td>
+<td style="text-align: left;">0.13%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ACF</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AMS</td>
+<td style="text-align: right;">914</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CPSC</td>
+<td style="text-align: right;">215</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FAA</td>
+<td style="text-align: right;">6127</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSIS</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HHSIG</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MARAD</td>
+<td style="text-align: right;">1327</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NRCS</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OCC</td>
+<td style="text-align: right;">246</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OSM</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RITA</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">USCG</td>
+<td style="text-align: right;">4738</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+</tbody>
+</table>
 
-</div>
-</div>
-</figure>
+
 </div>
 </div>
 </section>
-<section id="the-twenty-agencies-that-most-frequently-mention-ej-in-final-rules" class="slide level2">
-<h2>The twenty agencies that most frequently mention EJ in final rules</h2>
-<div class="cell">
-<div id="tbl-ej-rates-president-agency" class="cell quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ej-rates-president-agency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Rates of Mentioning “Environmental Justice” in Final Rules
-</figcaption>
-<div aria-describedby="tbl-ej-rates-president-agency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<section id="agencies-that-most-often-mention-ej-in-rules" class="slide level2">
+<h2>Agencies that most often mention EJ in rules</h2>
+<div id="tbl-ej-rates-president-agency" class="cell">
 <div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Agency</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Biden</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Trump</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Obama</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">G.W. Bush</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Clinton</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CEQ</td>
+<td style="text-align: left;">100.00%</td>
+<td style="text-align: left;">50.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FHWA</td>
+<td style="text-align: left;">100.00%</td>
+<td style="text-align: left;">30.00%</td>
+<td style="text-align: left;">66.67%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FTA</td>
+<td style="text-align: left;">100.00%</td>
+<td style="text-align: left;">100.00%</td>
+<td style="text-align: left;">58.33%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PHMSA</td>
+<td style="text-align: left;">92.31%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FRA</td>
+<td style="text-align: left;">91.67%</td>
+<td style="text-align: left;">33.33%</td>
+<td style="text-align: left;">5.56%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FEMA</td>
+<td style="text-align: left;">80.00%</td>
+<td style="text-align: left;">25.00%</td>
+<td style="text-align: left;">47.06%</td>
+<td style="text-align: left;">20.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BOEM</td>
+<td style="text-align: left;">66.67%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">16.67%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EPA</td>
+<td style="text-align: left;">51.34%</td>
+<td style="text-align: left;">37.87%</td>
+<td style="text-align: left;">44.06%</td>
+<td style="text-align: left;">24.10%</td>
+<td style="text-align: left;">22.73%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">50.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">USDA</td>
+<td style="text-align: left;">20.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">50.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BLM</td>
+<td style="text-align: left;">44.44%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">6.67%</td>
+<td style="text-align: left;">20.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FS</td>
+<td style="text-align: left;">40.00%</td>
+<td style="text-align: left;">12.50%</td>
+<td style="text-align: left;">20.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">COE</td>
+<td style="text-align: left;">38.46%</td>
+<td style="text-align: left;">31.25%</td>
+<td style="text-align: left;">5.13%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FMCSA</td>
+<td style="text-align: left;">5.26%</td>
+<td style="text-align: left;">31.58%</td>
+<td style="text-align: left;">37.04%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NHTSA</td>
+<td style="text-align: left;">31.58%</td>
+<td style="text-align: left;">4.76%</td>
+<td style="text-align: left;">6.90%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSEE</td>
+<td style="text-align: left;">28.57%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">16.67%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NTSB</td>
+<td style="text-align: left;">20.00%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RBS</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">20.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NRC</td>
+<td style="text-align: left;">1.92%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">4.86%</td>
+<td style="text-align: left;">11.70%</td>
+<td style="text-align: left;">18.18%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DOT</td>
+<td style="text-align: left;">9.09%</td>
+<td style="text-align: left;">15.38%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CCC</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">12.50%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DOE</td>
+<td style="text-align: left;">10.53%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RHS</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">10.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GSA</td>
+<td style="text-align: left;">8.70%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RUS</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">7.41%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TREAS</td>
+<td style="text-align: left;">6.67%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BIA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">5.88%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HUD</td>
+<td style="text-align: left;">5.56%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">2.44%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EBSA</td>
+<td style="text-align: left;">4.35%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HHS</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">4.08%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FDA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">2.04%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">3.85%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NOAA</td>
+<td style="text-align: left;">3.41%</td>
+<td style="text-align: left;">0.62%</td>
+<td style="text-align: left;">1.98%</td>
+<td style="text-align: left;">0.53%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DOD</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">3.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FWS</td>
+<td style="text-align: left;">0.34%</td>
+<td style="text-align: left;">0.51%</td>
+<td style="text-align: left;">0.79%</td>
+<td style="text-align: left;">1.33%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IRS</td>
+<td style="text-align: left;">1.05%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EERE</td>
+<td style="text-align: left;">1.01%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.46%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMS</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.38%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ACF</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AMS</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CPSC</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FAA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSIS</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HHSIG</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MARAD</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NRCS</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OCC</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OSM</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RITA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">USCG</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">0.00%</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
 
-</div>
-</div>
-</figure>
+
 </div>
 </div>
 <!--
@@ -890,26 +1570,29 @@ often come up.
 Research agencies, including the Nuclear Regulatory Commission (NRC) and National Oceanographic and Atmospheric Administration (NOAA), also have a low but significant baseline rate of adding EJ to final rules.
 -->
 </section>
-<section id="rates-of-change-with-and-without-comments-raising-environmental-justice" class="slide level2">
-<h2>Rates of Change With and Without Comments Raising Environmental Justice</h2>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:75%;">
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div>
 <figure>
-<p><img data-src="../figs/ej-PR-winrate-1.png" style="width:49.0%"></p>
-<figcaption>Rates of Change Between Draft and Final Rule</figcaption>
+<p><img data-src="../figs/ej-PR-winrate-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div>
 <figure>
-<p><img data-src="../figs/ejejPR-winrate-1.png" style="width:49.0%"></p>
-<figcaption>Rates of Change Between Draft and Final Rule</figcaption>
+<p><img data-src="../figs/ejejPR-winrate-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
+</div><div class="column" style="width:25%;">
+<p>Rates of Change With and Without Comments Raising Environmental Justice</p>
+</div></div>
 </section>
 <section id="failing-to-respond" class="slide level2">
 <h2>Failing to respond</h2>
