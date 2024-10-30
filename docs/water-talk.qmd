@@ -435,7 +435,7 @@ vulnerable than adults... [(The President’s Cancer Panel)]()
 
 ## Intersections of space and identity 
 
-Language and culture overlap with specific geographies, especially with Native lands. Native commenters frequently assert harm to certain locations as harm to their culture. 
+- Language and culture overlap with specific geographies, especially with Native lands. Native commenters frequently assert harm to certain locations as harm to their culture. 
 
 - Cumulative impacts at home and at work
 
@@ -485,7 +485,7 @@ Similarly, the Bush EPA cited other policies as backstops, arguing that deregula
 
 ## Coopting the frame
 
-### Consumer prices as an environmental justice issue
+Consumer prices as an environmental justice issue
 
 > Low-income and minority communities located in proximity to EGUs may have experienced an improvement in air quality as a result of the emissions reductions. However, the EPA did not address the potential distribution of compliance costs associated with the CPP...Low-income households typically spend a greater share of their household income on energy, and to the extent that this action reduces energy costs, those low-income households will experience lower energy bills. [(EPA-HQ-OAR-2017-0355, 2017)](https://www.federalregister.gov/documents/2017/10/16/2017-22349/repeal-of-carbon-pollution-emission-guidelines-for-existing-stationary-sources-electric-utility)
 
@@ -495,7 +495,7 @@ When the Trump Administration repealed the Clean Power Plan (CPP) regulations on
 
 ## Coopting the frame
 
-### "Job-killing" regulation as an environmental justice issue
+"Job-killing" regulation as an environmental justice issue
 
 > While employment effects are not experienced uniformly across the population and may be offset by new opportunities in different sectors, localized impacts could have adversely affected individuals and their communities... In addition, past research has suggested that involuntary job loss may increase risks to health, substance abuse, and even mortality. [(EPA-HQ-OAR-2017-0355, 2017)](https://www.federalregister.gov/documents/2017/10/16/2017-22349/repeal-of-carbon-pollution-emission-guidelines-for-existing-stationary-sources-electric-utility)
 
