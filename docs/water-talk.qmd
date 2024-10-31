@@ -71,10 +71,10 @@ Medium-scale hand-coded sample of all 11,000 comments from organizations on 200 
 - mostly Big Greens using generic EJ language
 - radically different meanings of EJ across commenters and administrations 
 
-## Example Mercury From Power Plants
+## Example: Mercury From Power Plants
 
 
-`1990 Clean Air Act: EPA shall regulate as “appropriate and necessary” for public health`
+1990 Clean Air Act: EPA shall regulate as `“appropriate and necessary”` for `public health`
 
 <!--Section 112(n)(1)(A)--> 
 
@@ -96,17 +96,19 @@ Before the politics of who gets what, there is the politics of who the whos *are
 - 2005 Final Rule: `"Environmental justice" for “minority populations”`
 
 
+::: {layout-ncol=4}
+
+![](figs/acat.png)
+
+![](figs/ncai_logo.png)
+
+![](figs/sierra_logo.png)
+
+![](figs/Tom_Allen.jpeg)
 
 
-```{r, fig.show = "hold", out.width = c("20%","20%","20%","20%")}
-#| fig-show: hold
-knitr::include_graphics("Figs/acat.png")
-knitr::include_graphics("Figs/ncai_logo.jpg")
-knitr::include_graphics("Figs/sierra_logo.png")
-knitr::include_graphics("Figs/Tom_Allen.jpeg")
-```
 
-
+:::
 
 :::{.notes}
 
@@ -609,9 +611,9 @@ Research agencies, including the Nuclear Regulatory Commission (NRC) and Nationa
 #| fig-show: hold
 #| out-width: "100%"
 
-knitr::include_graphics(here::here("figs", "ej-PR-winrate-1.png"))
+knitr::include_graphics("figs/ej-PR-winrate-1.png")
 
-knitr::include_graphics(here::here("figs", "ejejPR-winrate-1.png"))
+knitr::include_graphics("figs/ejejPR-winrate-1.png")
 
 #include_graphics(here::here("figs", "ej-PR-winrate-agency-1.png"))
 ```
