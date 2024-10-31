@@ -620,7 +620,7 @@ knitr::include_graphics(here::here("figs", "ejejPR-winrate-1.png"))
 
 ::: {.column width="25%"}
 
-Rates of Change With and Without Comments Raising Environmental Justice
+### Rates of Change With and Without Comments Raising Environmental Justice
 :::
 
 ::::
